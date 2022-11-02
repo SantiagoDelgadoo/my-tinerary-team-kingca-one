@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import './data/users';
 import './data/cities';
-import './data/activities'
+import './data/activities';
+import './data/admin';
+import './data/places';
+import './data/events';
 function App() {
   return (
     <div className="App">
