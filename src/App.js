@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-
+import './data/users';
+import './data/cities';
+import './data/activities'
 function App() {
   return (
     <div className="App">
@@ -21,5 +23,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
