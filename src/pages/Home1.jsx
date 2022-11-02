@@ -9,10 +9,10 @@ export default function Home1() {
       <NavBar></NavBar>
       <div className="containerSubtitulos">
       <div className="subtituloHome1">
-        <p>Are you Ready to Explore?</p>
+        <h3>Are you Ready to Explore?</h3>
       </div>
       <div className="tituloHome1">
-        <p className="tituloHome1"><span className="colorNaranjaDeLinea">|</span> MY TINERARY TRAVELS</p>
+        <h1><span className="colorNaranjaDeLinea">|</span> MY TINERARY TRAVELS</h1>
       </div>
         <CallToAction className='boton1' contenido= "Cities" rute= "/cities"></CallToAction>
         <CallToAction contenido= "Hotels" rute= "/hotels"></CallToAction>

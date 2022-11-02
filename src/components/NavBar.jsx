@@ -1,6 +1,13 @@
 import React from "react";
-import {Link as NavLink} from 'react-router-dom' 
+import {Link as NavLink} from 'react-router-dom'
+import { useState } from "react";
 export default function NavBar() {
+  let [seeLogin,setSeeLogin] = useState (true)
+  let change = () => {
+    setSeeLogin (!seeLogin)
+  }
+
+
   return (
     <div className="containerGrande">
     <div className="ContainerHome1">
@@ -19,10 +26,19 @@ export default function NavBar() {
         <ul>Hotels</ul>
         </NavLink>
       </nav>
-      <div className="usuario">
-    <img src="./img/usuario.png" alt="Usuario"/>
-      </div>
+      {
+        seeLogin
+        ? (<div className="usuario">
+        <img src="./img/usuario.png" onClick={change} alt="Usuario"/>
+          <button>Login</button>
+          <button>Logout</button>
+          </div>)
+          : (<div className="usuario">
+          <img src="./img/usuario.png" onClick={change} alt="Usuario"/>
+            </div>)
+      }
     </div>
+    
     </div>
   );
-}
+  }

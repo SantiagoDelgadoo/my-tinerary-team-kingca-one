@@ -80,7 +80,7 @@ ul:hover {
   z-index: 2;
 }
 
-.tituloHome1 {
+h1 {
   font-family: 'Anton', sans-serif;
   color: white;
   font-size: 80px;
@@ -123,4 +123,32 @@ ul:hover {
 
 .botones:hover {
   background-color: #467BE7;
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 630px) {
+  h1 {
+    font-size: 40px;
+  }
+  .subtituloHome1 {
+  font-size: 20px;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .usuario img {
+    width: 25px;
+  }
+  .botones {
+    width: 120px;
+  }
+
+.logo {
+  display: none;
+}
 }
