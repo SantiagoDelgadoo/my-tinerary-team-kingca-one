@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.containerGrande {
   min-height: 100vh;
+  width: 100%;
+  /* background-color: rgba(57, 53, 53, 0.362); */
+  position: absolute;
+  /* z-index: 1; */
+}
+
+.FirstContainer {
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../public/img/img-camellos.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ContainerHome1 {
+  min-height: 20vh;
+  display: flex;
+  width: 100%;
+  background-color: rgba(15, 14, 14, 0.596);
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  display: flex;
+  font-weight: 300;
+  z-index: 20;
+}
+
+ul {
+  margin: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+ul:hover {
+  border-bottom: 3px solid #EA5318;
+  padding-bottom: 1rem;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoLogo {
+  font-size: 14px;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.usuario img {
+  width: 50px;
+}
+
+.subtituloHome1 {
+  color: #EA5318;
+  font-size: 35px;
+  margin-left: 4rem;
+  z-index: 2;
+}
+
+.tituloHome1 {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 400;
+  margin-left: 3rem;
+  z-index: 3;
+}
+
+.colorNaranjaDeLinea {
+  color: #EA5318;
+}
+
+.containerSubtitulos {
+  height: 50vh;
+  width: 100%;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.botones {
+  display: flex;
+  border-radius: 5px;
+  background-color: #EA5318;
+  border: none;
+  padding: 10px 20px;
+  width: 240px;     
+  margin: 0px 10px ;
+  color: white;     
+  font-size: 1.1rem;     
+  cursor: pointer; 
+  z-index: 200;
+  margin-bottom: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botones:hover {
+  background-color: #467BE7;
 }
