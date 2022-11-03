@@ -9,14 +9,18 @@ import './data/events';
 import Main from './layouts/Main';
 import {Routes, Route} from 'react-router-dom' 
 import Home1 from './pages/Home1';
+import AutoToTop from './components/AutoToTop';
 function App() {
   return (
+    <>
+    <AutoToTop></AutoToTop>
     <Main>
     <Routes>
     <Route path="/home" element={<Home1/>}>
       </Route>
     </Routes>
     </Main>
+    </>
   );
 }
 export default App;
