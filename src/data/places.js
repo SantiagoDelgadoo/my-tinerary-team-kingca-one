@@ -29,7 +29,7 @@ let places = [
     {
         id: "cas2",
         name: "Club Pierre Charron",
-        photo: ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tripadvisor.es%2FAttraction_Review-g187147-d21131415-Reviews-Club_Pierre_Charron-Paris_Ile_de_France.html&psig=AOvVaw2_3GwjcNINmiGLegeuLKbd&ust=1667438634026000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOiXy42rjvsCFQAAAAAdAAAAABAE","https://www.clubpierrecharron.com/storage/n1X0Q2ZWYABIIvIoYWRAzTWOHrmfJjIFNQMiOtkR.jpeg","https://cdn.sortiraparis.com/images/58/95998/695838-visite-du-club-pierre-charron.jpg"],
+        photo: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/d3/4b/2f/salle-des-grands-jeux.jpg?w=1200&h=-1&s=1","https://www.clubpierrecharron.com/storage/n1X0Q2ZWYABIIvIoYWRAzTWOHrmfJjIFNQMiOtkR.jpeg","https://cdn.sortiraparis.com/images/58/95998/695838-visite-du-club-pierre-charron.jpg"],
         capacity: 5000,
         description: "A stone’s throw from the Champs-Élysées, the Marval Group chose Paris and its golden triangle to open its first establishment dedicated to betting games: Club Pierre Charron.",
         cityId: "city4",
@@ -56,7 +56,7 @@ let places = [
     {
         id: "hot4",
         name: "NH Collection Roma Fori Imperiali",
-        photo: ["https://img.nh-hotels.net/rNrzE/wwJ47/original/V_NH_collection-fori-imperiali_110.jpg?output-quality=70&resize=555:*&composite-to=center,center|555:280&background-color=white","https://img.nh-hotels.net/rNrzE/N1k1Y/original/NH_Collection_Fori_Imperiali_Room_junior_suite_Fori_Imperiali_sunset_view.jpg?output-quality=70&resize=555:*&composite-to=center,center|555:280&background-color=white","https://img.nh-hotels.net/rNrzE/VDBve/original/T_NH_collection-fori-imperiali_078.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white"],
+        photo: ["https://img.nh-hotels.net/rNrzE/bqVqz/original/NH_Collection_Fori_Imperiali_Hotel_facilities_terrace_sunset_cocktail_setup.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white","https://img.nh-hotels.net/rNrzE/N1k1Y/original/NH_Collection_Fori_Imperiali_Room_junior_suite_Fori_Imperiali_sunset_view.jpg?output-quality=70&resize=555:*&composite-to=center,center|555:280&background-color=white","https://img.nh-hotels.net/rNrzE/VDBve/original/T_NH_collection-fori-imperiali_078.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white"],
         capacity: 12000,
         description: "Step back in time to experience the everyday life of Ancient Rome during your stay at the NH Collection Roma Fori Imperiali. Located in an area full of archaeological treasures and close to the Roman Forum and Piazza Venezia, this brand new five-star boutique hotel is the perfect base for exploring the city.",
         cityId: "city8",
@@ -65,7 +65,7 @@ let places = [
     {
         id: "hot5",
         name: "Hilton Tokio Hotel",
-        photo: ["https://lh3.googleusercontent.com/p/AF1QipORhrxSbcj1aZMNBN1JkfWRgeu4ERfid2qwJ1Xy=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipMjpgK2PJtPdYYeCqR6gPk4E48-J6DjSsI70PyA=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipPgHyEj7anuzjhFvtm0HDjZ_JM-SS3ivQnOVtRR=w296-h202-n-k-rw-no-v1"],
+        photo: ["https://pix10.agoda.net/hotelImages/932/9322/9322_16111516190048736943.jpg?ca=6&ce=1&s=1024x768","https://lh3.googleusercontent.com/p/AF1QipMjpgK2PJtPdYYeCqR6gPk4E48-J6DjSsI70PyA=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipPgHyEj7anuzjhFvtm0HDjZ_JM-SS3ivQnOVtRR=w296-h202-n-k-rw-no-v1"],
         capacity: 20000,
         description: "This elegant, high-rise hotel is a 10-minute walk from Shinjuku Train Station, a 6-minute walk from the Tokyo Metropolitan Government Building and 3 km from Yoyogi Park.",
         cityId: "city1",
@@ -74,7 +74,7 @@ let places = [
     {
         id: "hot6",
         name: "Mangaart Hotel",
-        photo: ["https://lh3.googleusercontent.com/p/AF1QipOk-U-oa9YlrNaeqbjngxgdtEzBwKfJLQUrRnN9=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipO82OwFegvFxKmHRmn90ivVB6Y0Lc0qvHL0jGwn=w296-h202-n-k-rw-no-v1"],
+        photo: ["https://asset.japantoday.com/img/store/6e/79/dabff8453d7c07b57a97ccac186e585131cc/mh-3.png","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipO82OwFegvFxKmHRmn90ivVB6Y0Lc0qvHL0jGwn=w296-h202-n-k-rw-no-v1"],
         capacity: 14000,
         description: "Welcome to the world of the Manga Brain.In our hotel, reality is strictly forbidden.We want you to spend the entire night absorbed in the world of the works.",
         cityId: "city1",
@@ -92,7 +92,7 @@ let places = [
     {
         id: "hot8",
         name: "DoubleTree by Hilton Hotel",
-        photo: ["https://lh5.googleusercontent.com/p/AF1QipP7F1nXcraWW10qrZ5JpQxGo2D12Mp6I7s2lkmz=w253-h168-k-no","https://lh5.googleusercontent.com/p/AF1QipMEy0CfdwZRlYlzQsxQvwTc8fVMOWdGfrXFtiXa=w253-h168-k-no","https://lh5.googleusercontent.com/p/AF1QipNiFdE3k6BK86RTNaYWObovF-WTSAbbwz-UXLOt=w253-h168-k-no"],
+        photo: ["https://assets.hiltonstatic.com/image/upload/t_MODx%20-%20Masthead/t_MODx%20-%20Masthead/v1597861370/Imagery/Property%20Photography/DoubleTree%20Suites/S/SCLSKDT/Facade%20Hotel10.jpg","https://lh5.googleusercontent.com/p/AF1QipMEy0CfdwZRlYlzQsxQvwTc8fVMOWdGfrXFtiXa=w253-h168-k-no","https://lh5.googleusercontent.com/p/AF1QipNiFdE3k6BK86RTNaYWObovF-WTSAbbwz-UXLOt=w253-h168-k-no"],
         capacity: 6000,
         description: "This luxurious and modern hotel faces the Hudson River, surrounded by restaurants, 3 blocks from the theaters of Times Square, a 6-minute walk from the Times Square-42 Street subway station and 1.6 km from the Empire State Building.",
         cityId: "city2",
