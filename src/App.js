@@ -8,7 +8,7 @@ import './data/events';
 import Main from './layouts/Main';
 import {Routes, Route} from 'react-router-dom' 
 import Home1 from './pages/Home1';
-import Home2 from './pages/home2';
+import Home2 from './pages/Home2';
 import AutoToTop from './components/AutoToTop';
 function App() {
   return (

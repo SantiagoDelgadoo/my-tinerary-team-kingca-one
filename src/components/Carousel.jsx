@@ -1,9 +1,9 @@
 import React from 'react'
-
-export default function Carousel() {
+export default function Carousel(props) {
+    let {image}=props
   return (
 <>
-<img src='./img/sujeto1.png' alt='sujeto1' className='photo' />
+<img src={image} alt='sujeto' className='photoCarrusel'/>
 </>
   )
 }
