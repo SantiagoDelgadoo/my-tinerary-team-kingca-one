@@ -45,7 +45,7 @@ export default function Carousel(props) {
   return (
 <>
 <div className='flex-column'>
-<h2>HOTELS</h2>
+<h2>CITIES</h2>
 <div className='carousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <img src={cities[numberOfChange].photo} alt='sujeto' className='photoCarrusel'/>
@@ -53,7 +53,9 @@ export default function Carousel(props) {
 <img src={cities[numberOfChange+2].photo} alt='sujeto' className='photoCarrusel'/>
 <Arrow icon={">"} onClick={next}/>
 </div>
-<h2>CITIES</h2>
+
+
+<h2>PLACES</h2>
 <div className='carousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <img src={places[numberOfChange+2].photo[0]} alt='sujeto' className='photoCarrusel'/>

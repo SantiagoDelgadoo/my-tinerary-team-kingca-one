@@ -56,7 +56,7 @@ let places = [
     {
         id: "hot4",
         name: "NH Collection Roma Fori Imperiali",
-        photo: ["https://img.nh-hotels.net/rNrzE/bqVqz/original/NH_Collection_Fori_Imperiali_Hotel_facilities_terrace_sunset_cocktail_setup.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white","https://img.nh-hotels.net/rNrzE/N1k1Y/original/NH_Collection_Fori_Imperiali_Room_junior_suite_Fori_Imperiali_sunset_view.jpg?output-quality=70&resize=555:*&composite-to=center,center|555:280&background-color=white","https://img.nh-hotels.net/rNrzE/VDBve/original/T_NH_collection-fori-imperiali_078.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white"],
+        photo: ["https://img.nh-hotels.net/rNrzE/bqVqz/original/NH_Collection_Fori_Imperiali_Hotel_facilities_terrace_sunset_cocktail_setup.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white","https://img.nh-hotels.net/rNrzE/N1k1Y/original/NH_Collection_Fori_Imperiali_Room_junior_suite_Fori_Imperiali_sunset_view.jpg?output-quality=70&resize=555:*&composite-to=center,center|555:280&background-color=white","https://img.nh-hotels.net/rNrzE/L0yoG/original/T_NH_collection-fori-imperiali_054.jpg?output-quality=80&resize=1110:*&composite-to=center,center|1110:380&background-color=white"],
         capacity: 12000,
         description: "Step back in time to experience the everyday life of Ancient Rome during your stay at the NH Collection Roma Fori Imperiali. Located in an area full of archaeological treasures and close to the Roman Forum and Piazza Venezia, this brand new five-star boutique hotel is the perfect base for exploring the city.",
         cityId: "city8",
@@ -65,7 +65,7 @@ let places = [
     {
         id: "hot5",
         name: "Hilton Tokio Hotel",
-        photo: ["https://pix10.agoda.net/hotelImages/932/9322/9322_16111516190048736943.jpg?ca=6&ce=1&s=1024x768","https://lh3.googleusercontent.com/p/AF1QipMjpgK2PJtPdYYeCqR6gPk4E48-J6DjSsI70PyA=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipPgHyEj7anuzjhFvtm0HDjZ_JM-SS3ivQnOVtRR=w296-h202-n-k-rw-no-v1"],
+        photo: ["https://hi-cdn.t-rp.co.uk/images/hotels/1781090/0?width=870&height=480&crop=false","https://lh3.googleusercontent.com/p/AF1QipMjpgK2PJtPdYYeCqR6gPk4E48-J6DjSsI70PyA=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipPgHyEj7anuzjhFvtm0HDjZ_JM-SS3ivQnOVtRR=w296-h202-n-k-rw-no-v1"],
         capacity: 20000,
         description: "This elegant, high-rise hotel is a 10-minute walk from Shinjuku Train Station, a 6-minute walk from the Tokyo Metropolitan Government Building and 3 km from Yoyogi Park.",
         cityId: "city1",
@@ -74,7 +74,7 @@ let places = [
     {
         id: "hot6",
         name: "Mangaart Hotel",
-        photo: ["https://asset.japantoday.com/img/store/6e/79/dabff8453d7c07b57a97ccac186e585131cc/mh-3.png","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipO82OwFegvFxKmHRmn90ivVB6Y0Lc0qvHL0jGwn=w296-h202-n-k-rw-no-v1"],
+        photo: ["https://visit-chiyoda.com/wp-content/uploads/2019/11/P2100209.jpg","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipO82OwFegvFxKmHRmn90ivVB6Y0Lc0qvHL0jGwn=w296-h202-n-k-rw-no-v1"],
         capacity: 14000,
         description: "Welcome to the world of the Manga Brain.In our hotel, reality is strictly forbidden.We want you to spend the entire night absorbed in the world of the works.",
         cityId: "city1",
