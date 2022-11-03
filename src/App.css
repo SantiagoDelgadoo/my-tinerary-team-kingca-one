@@ -199,8 +199,8 @@ h1 {
 }
 .botonUp{
   position:fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 8rem;
+  right: 5rem;
   height: 50px;
   width: 50px;
   font-size: 50px;
@@ -208,7 +208,6 @@ h1 {
 main{
 width: 100%;
 min-height: 100vh;
-/*   background-color: black; */
 }
 .carousel{
 width: 100%;
@@ -216,10 +215,66 @@ height: 40vh;
 display: flex;
 align-items: center;
 justify-content: center;
+gap: 1rem;
+}
+.carousel>img{
+  object-fit: cover;
+}
+h2{
+color: #EA5318;
+text-decoration: underline;
+ align-self: flex-start;
+ padding: 2rem;
+ padding-left: 10rem;
 }
 
 .photoCarrusel{
-  width: 50%;
-  height: 100%;
+  width: 25%;
+  height: 90%;
+  border-radius: 2rem;
   
+}
+.Footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+  background-color: rgb(42, 42, 42);
+}
+.Footer-nav{
+  display: flex;
+  flex-direction: column;
+}
+.Footer-nav>a{
+padding: 0.5rem;
+}
+.FooterGit{
+  display: flex;
+  flex-direction: column;
+}
+.FooterGit>a{
+  padding: 0.5rem;
+  color: white;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-carousel{
+  font-size: 2rem;
+  background-color: #e7e7e7; 
+  color: rgb(255, 255, 255);
+  border: 2px solid gray;
+  border-radius: 2rem;
+  height: 10rem;
+}
+.btn-carousel {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn-carousel:hover {
+  background-color: gray;
+  color: white;
 }
