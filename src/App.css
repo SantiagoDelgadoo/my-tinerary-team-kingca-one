@@ -73,6 +73,33 @@ ul:hover {
   width: 50px;
 }
 
+.usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.usuario button {
+  background-color:#EA5318;
+  color: white;
+  border: none;
+  margin-top: 16px;
+  border-radius: 6px;
+}
+
+.containerBurger {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerBurger button {
+  background-color:#EA5318;
+  color: white;
+  border: none;
+  margin-top: 16px;
+  border-radius: 6px;
+  padding: 2px;
+}
+
 .subtituloHome1 {
   color: #EA5318;
   font-size: 35px;
@@ -125,11 +152,29 @@ h1 {
   background-color: #467BE7;
 }
 
+.menuBurguer {
+  width: 35px;
+}
+
+
+@media (min-width: 769px) {
+  .menuBurguer {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+}
+
+
 @media (max-width: 850px) {
   h1 {
     font-size: 60px;
   }
-}
+  }
 
 @media (max-width: 630px) {
   h1 {
