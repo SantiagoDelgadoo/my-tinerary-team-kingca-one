@@ -41,6 +41,16 @@ nav {
   z-index: 20;
 }
 
+.buttonHeader {
+  cursor: pointer;
+  width: 55px;
+  height: 20px;
+}
+
+.buttonHeader:hover {
+  background-color: #467BE7;
+} 
+
 ul {
   margin: 16px;
   font-weight: 500;
@@ -64,6 +74,7 @@ ul:hover {
 }
 
 .textoLogo {
+  color: white;
   font-size: 14px;
   margin-left: 6px;
   font-weight: 700;
@@ -154,10 +165,6 @@ h1 {
 
 .menuBurguer {
   width: 35px;
-}
-
-.logo {
-  display: none;
 }
 
 .botonUp{

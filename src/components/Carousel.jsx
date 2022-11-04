@@ -45,7 +45,7 @@ export default function Carousel(props) {
   return (
 <>
 <div className='flex-column'>
-<h2><span className="colorNaranjaDeLinea">|</span>CITIES</h2>
+<h2><span className="colorNaranjaDeLinea">| </span>CITIES</h2>
 <div className='conteinerCarousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <div className='carousel'>
@@ -57,7 +57,7 @@ export default function Carousel(props) {
 </div>
 
 
-<h2><span className="colorNaranjaDeLinea">|</span>PLACES</h2>
+<h2><span className="colorNaranjaDeLinea">| </span>PLACES</h2>
 <div className='conteinerCarousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <div className='carousel'>
