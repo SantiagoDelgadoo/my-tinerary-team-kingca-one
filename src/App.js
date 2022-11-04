@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import './data/users';
 import './data/cities';
 import './data/activities';
@@ -9,6 +8,7 @@ import './data/events';
 import Main from './layouts/Main';
 import {Routes, Route} from 'react-router-dom' 
 import Home1 from './pages/Home1';
+import Home2 from './pages/Home2';
 import AutoToTop from './components/AutoToTop';
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       </Route>
     </Routes>
     </Main>
+    <Home2/>
     </>
   );
 }

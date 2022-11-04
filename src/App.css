@@ -156,6 +156,112 @@ h1 {
   width: 35px;
 }
 
+.logo {
+  display: none;
+}
+
+.botonUp{
+  position:fixed;
+  bottom: 8rem;
+  right: 5rem;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  border-radius: 40px;
+}
+main{
+width: 100%;
+min-height: 100vh;
+}
+.carousel{
+width:100%;
+min-height: 40vh;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+background-color: rgb(248, 248, 248);
+border-radius: 2.5rem;
+}
+.carousel>img{
+  width: 500px;
+  height: 20rem;
+  padding: 1rem;
+}
+h2{
+color: #EA5318;
+ align-self: flex-start;
+ padding: 2rem;
+ padding-left: 10rem;
+ font-size: 3rem;
+}
+
+.photoCarrusel{
+  width: 25rem;
+  height: 90%;
+  border-radius: 2rem;
+  
+}
+.Footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+  height: 20vh;
+  background-color: rgb(20, 20, 20);
+}
+.Footer>p{
+  color: #e7e7e7;
+}
+.Footer-nav{
+  display: flex;
+  flex-direction: column;
+}
+.Footer-nav>a{
+padding: 0.5rem;
+}
+.FooterGit{
+  display: flex;
+  flex-direction: column;
+}
+.FooterGit>a{
+  padding: 0.5rem;
+  color: white;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Footer-link{
+  color: #e7e7e7;
+}
+.btn-carousel{
+  font-size: 2rem;
+  background-color: #e7e7e7; 
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(248, 248, 248);
+  border-radius: 2rem;
+  height: 10rem;
+  padding: 2rem;
+}
+.btn-carousel{
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn-carousel:hover {
+  background-color: gray;
+  color: white;
+}
+
+.conteinerCarousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
 @media (min-width: 769px) {
   .menuBurguer {
@@ -192,8 +298,61 @@ h1 {
   .botones {
     width: 120px;
   }
-
-.logo {
-  display: none;
 }
+
+@media (max-width: 769px) {
+  .conteinerCarousel{
+    padding: 2rem;
+  }
+  .btn-carousel{
+    display: none;
+    width: 5px;
+    font-size: 1rem;
+  }
+  .carousel>img{
+    width: 320px;
+    height: 15rem;
+    padding: 1rem;
+  }
+  h2{
+    color: #EA5318;
+     align-self: flex-start;
+     padding: 2rem;
+     padding-left: 5rem;
+     font-size: 3rem;
+    }
+    .botonUp{
+      position:fixed;
+      bottom: 2rem;
+      right: 2rem;
+      height: 30px;
+      width: 30px;
+      font-size: 20px;
+      border-radius: 30px;
+    }
+    .Footer{
+      display: flex;
+      height: auto;
+      flex-direction: column ;
+    }
+    .Footer>p{
+      color: #e7e7e7;
+      padding: 10px;
+    }
+  }
+    @media (max-width: 386px) {
+      .conteinerCarousel{
+        padding: 0rem;
+      }
+      .btn-carousel{
+        display: none;
+        width: 5px;
+        font-size: 1rem;
+      }
+      .carousel>img{
+        width: 310px;
+        height: 15rem;
+        padding: 4px;
+      }
+
 }
