@@ -26,9 +26,15 @@ export default function NavBar() {
         ) : (
           <div className="containerBurger">
             <img src="./img/hambur.png" className="menuBurguer" onClick={changeMenu} alt="Menu Desplegable"/>
-            <button>Home</button>
-            <button>Cities</button>
-            <button>Hotels</button>
+          <NavLink style={{textDecoration: 'none'}} to="/home">
+            <ul>Home</ul>
+          </NavLink>
+          <NavLink style={{textDecoration: 'none'}}to="/cities">
+            <ul>Cities</ul>
+          </NavLink>
+          <NavLink style={{textDecoration: 'none'}}to="/hotels">
+            <ul>Hotels</ul>
+          </NavLink>
           </div>
         )}
         <nav>
@@ -45,8 +51,12 @@ export default function NavBar() {
         {seeLogin ? (
           <div className="usuario">
             <img src="./img/usuario.png" onClick={change} alt="Usuario" />
+            <NavLink style={{textDecoration: 'none'}}to="/signup">
             <button>Login</button>
+            </NavLink>
+            <NavLink style={{textDecoration: 'none'}}to="/logout">
             <button>Logout</button>
+            </NavLink>
           </div>
         ) : (
           <div className="usuario">

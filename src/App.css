@@ -64,6 +64,7 @@ ul:hover {
 }
 
 .textoLogo {
+  color: white;
   font-size: 14px;
   margin-left: 6px;
   font-weight: 700;
@@ -154,10 +155,6 @@ h1 {
 
 .menuBurguer {
   width: 35px;
-}
-
-.logo {
-  display: none;
 }
 
 .botonUp{
