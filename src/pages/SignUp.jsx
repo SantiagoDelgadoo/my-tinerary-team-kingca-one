@@ -26,7 +26,6 @@ export default function SignUp() {
 
   return (
     <div className= "FirstContainer">
-        <NavBar></NavBar>
     <div className="containerSingup">
         <div className="containerForm">
                     <h4 className="subtituloSignUp"><span className="colorNaranjaDeLinea">|</span> Create your account</h4>

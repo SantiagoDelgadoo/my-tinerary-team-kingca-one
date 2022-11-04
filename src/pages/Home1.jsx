@@ -6,7 +6,6 @@ import { Link as NavLink } from 'react-router-dom'
 export default function Home1() {
   return (
     <div className="FirstContainer">
-      <NavBar></NavBar>
       <div className="containerSubtitulos">
       <div className="subtituloHome1">
         <h3>Are you Ready to Explore?</h3>
