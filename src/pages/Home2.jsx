@@ -10,7 +10,6 @@ export default function Home2() {
     <Carousel/>
     <ScrollToTop/>
     </main>
-    <Footer/>
     </>
   )
 }
