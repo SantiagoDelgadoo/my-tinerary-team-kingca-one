@@ -10,6 +10,7 @@ import {Routes, Route} from 'react-router-dom'
 import AutoToTop from './components/AutoToTop';
 import NotFound from './pages/NotFound';
 import Welcome from './pages/Welcome';
+import SignUp from './pages/SignUp';
 function App() {
   return (
     
@@ -20,6 +21,7 @@ function App() {
     <Route path="/home" element={<Welcome/>}></Route>
     <Route path="/cities" element={<NotFound/>}></Route>
     <Route path="*" element={<NotFound/>}></Route>
+    <Route path="/signup" element={<SignUp/>}></Route>
     </Routes>
     </Main>
   );
