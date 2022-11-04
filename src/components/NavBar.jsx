@@ -52,10 +52,10 @@ export default function NavBar() {
           <div className="usuario">
             <img src="./img/usuario.png" onClick={change} alt="Usuario" />
             <NavLink style={{textDecoration: 'none'}}to="/signup">
-            <button>Login</button>
+            <button className="buttonHeader">Login</button>
             </NavLink>
             <NavLink style={{textDecoration: 'none'}}to="/logout">
-            <button>Logout</button>
+            <button className="buttonHeader">Logout</button>
             </NavLink>
           </div>
         ) : (
