@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import Welcome from './pages/Welcome';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import Hotels from './pages/Hotels';
 function App() {
   return (
     
@@ -24,6 +25,7 @@ function App() {
     <Route path="*" element={<NotFound/>}></Route>
     <Route path="/signup" element={<SignUp/>}></Route>
     <Route path="/signin" element={<SignIn/>}></Route>
+    <Route path="/hotels" element={<Hotels/>}></Route>
     </Routes>
     </Main>
   );
