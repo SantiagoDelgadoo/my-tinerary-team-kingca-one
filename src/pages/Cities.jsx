@@ -39,8 +39,8 @@ export default function Cities() {
         </div>
     </div>
     <div className='containerSearchCheck'>
-    <fieldset onChange={checksChecked} > {continents.map(continent=><Label key={continent} cities={continent}/>)}</fieldset>
-    <label>
+    <fieldset className='containerSearchCheck' onChange={checksChecked} > {continents.map(continent=><Label key={continent} cities={continent}/>)}</fieldset>
+    <label className='containerSearchcities'>
             <input className='searchCities' onChange={search} type="search" placeholder='Search here for the name of the city you want'/>
     </label>
         </div>
