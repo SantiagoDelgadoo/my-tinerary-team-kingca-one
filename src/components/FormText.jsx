@@ -1,21 +1,19 @@
-import React from 'react'
+import React from "react";
 
 function FormText(props) {
-    return (
-        <form >
-            <label>
-                <input
-                    placeholder='search'
-                    type="text"
-                    id="FormText"
-                    value={props.value}
-                    onChange={props.onChange}
-                />
-            </label>
-
-        </form>
-
-    )
+  return (
+    <form>
+      <label>
+        <input
+          placeholder="search"
+          type="text"
+          id="FormText"
+          value={props.value}
+          onChange={props.onChange}
+        />
+      </label>
+    </form>
+  );
 }
 
-export default FormText
+export default FormText;
