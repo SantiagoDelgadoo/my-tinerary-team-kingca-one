@@ -3,7 +3,7 @@ import { useState } from "react";
 import places from "../data/places";
 import SearchBar from "./FormText";
 
-export default function CityHotels() {
+export default function CardHotels() {
   let placess = places;
   let [filterText, SetFilterText] = useState("");
   let [selectValue, setSelectValue] = useState("");

@@ -1,9 +1,9 @@
 import React from 'react'
-import CityHotels from '../components/CityHotels'
+import CardHotels from '../components/CardHotels'
 export default function Hotels() {
   return (
   <>
-   <div className='containerCityHotels'><CityHotels></CityHotels></div>
+   <div className='containerCityHotels'><CardHotels></CardHotels></div>
   </>
   )
 }
