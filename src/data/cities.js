@@ -10,7 +10,7 @@ let cities = [
     {
         id: "city2",
         name: "New York",
-        continent: "America del Norte",
+        continent: "America",
         photo: 'https://www.lanacion.com.ar/resizer/HPWQnuyJ7U2pq-7gh-baactRo5U=/1920x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/RGTEIMFAMNBKXCVLO2EEUTH3SY.jpg',
         population: "8.468 millones (2021)",
         userid: "admin2",
@@ -83,7 +83,7 @@ let cities = [
         id: "city11",
         name: "Osaka",
         continent: "Asia",
-        photo: 'https://www.tripsavvy.com/thmb/ehfkN9eA42Z5sy2gSS9fqhnmzYk=/2112x1188/smart/filters:no_upscale()/OsakaStreetsFeatured-0218be9676f246f6beaf9bdff2f36ad6.jpg',
+        photo: 'https://img.itinari.com/pages/images/original/0afe2310-ecf1-42ae-ba94-c6d9276d858b-istock-522473665.jpg?ch=DPR&dpr=2.625&w=1600&s=43a44f534ff621b768e852f9f2c8cf3e',
         population: "2.691 millones (2015)",
         userid: "admin3",
     },
