@@ -434,7 +434,37 @@ fieldset {
   font-size: 16px;
 }
 
+.containerNewPlace {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.containerFormPlace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.containerFormPlace input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.containerFormPlace label {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
 
 
 /* //////////////////////////////////////////////////////ARRANCA DETAILS CITIES/////////////////////////////////////////////////////////////// */
