@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 export default function CardCity(props) {
     let cities = props.cities
   return (
@@ -9,7 +9,7 @@ export default function CardCity(props) {
             <h3 className='subtituloCitiesCard'>{cities.name}</h3>
         </div>
             <div >
-            <button className='buttonDetailsCities'>More Details</button>
+                <NavLink to={`/details/${cities.id}`}><button className="buttonDetailsCities">More Details</button></NavLink>
             </div>
         
     </div>

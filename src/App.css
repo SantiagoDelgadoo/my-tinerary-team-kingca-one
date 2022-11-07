@@ -436,7 +436,79 @@ fieldset {
 
 
 
-/* --------------------------------------------------------------------------------------------------------------------------------- */
+
+/* //////////////////////////////////////////////////////ARRANCA DETAILS CITIES/////////////////////////////////////////////////////////////// */
+
+.ContainerDetailsCities {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDetails {
+  display: flex;
+  width: 750px;
+  height: 450px;
+  border-radius: 20px;
+  background-color:#ea5418b9;
+}
+
+.cardDetails img {
+  border-radius: 20px 0px 0px 20px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fatherPhoto {
+  width: 50%;
+  height: 100%;
+}
+
+.fatherPhoto img {
+  width: 100%;
+  height: 100%;
+}
+
+.fatherDescription {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.titleCities{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.descriptionCities {
+  font-size: 20px;
+  margin-top: 3rem;
+}
+
+/* --------------------------------------------------------HOTELES DE CITIES-------------------------------------------------------------------- */
+
+.fatherHotel {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .botonUp{
   position:fixed;
@@ -662,6 +734,10 @@ padding: 0.5rem;
 
 
 @media (max-width: 850px) {
+.cardDetails {
+  width: 400px;
+  height: 350px;
+}
   h1 {
     font-size: 60px;
   }
@@ -755,7 +831,10 @@ padding: 0.5rem;
         height: 15rem;
         padding: 4px;
       }
-
+      .cardDetails {
+        width: 300px;
+        height: 500px;
+      }
 }
 
 
