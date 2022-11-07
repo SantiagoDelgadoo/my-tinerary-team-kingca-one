@@ -64,9 +64,14 @@ export default function CardHotels() {
 
       {ArrayFiltered.map((place) => {
         return (
-          <div className="card">
-            <img className="cardPhoto" src={place.photo[0]} alt="photo of Place" />
-            <h2 className="titleCard">{place.name}</h2>
+          <div className="containerCards">
+            <div className="cardImg">
+              <img src={place.photo[0]} alt="photo of Place" />
+              <h3 className="subtituloCitiesCard">{place.name}</h3>
+            </div>
+            <div>
+              <button className="buttonDetailsCities">More Details</button>
+            </div>
           </div>
         );
       })}
