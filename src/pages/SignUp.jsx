@@ -30,20 +30,20 @@ export default function SignUp() {
         <div className="containerForm">
                     <h4 className="subtituloSignUp"><span className="colorNaranjaDeLinea">|</span> Create your account</h4>
                 <form ref={form} onSubmit= {newUser}>  
-                    <label>First Name
-                        <input ref={fName} type="text" placeholder="Enter your first name"/>
+                    <label className="labelSignUp">First Name
+                        <input className="inputSignUp"  ref={fName} type="text" placeholder="Enter your first name"/>
                     </label>
 
-                    <label>Last Name
-                        <input ref={lName} type="text" placeholder="Enter your last name"/>
+                    <label className="labelSignUp">Last Name
+                        <input className="inputSignUp" ref={lName} type="text" placeholder="Enter your last name"/>
                     </label>
 
-                    <label>Email
-                        <input ref={mail} type="text" placeholder="Enter your email"/>
+                    <label className="labelSignUp">Email
+                        <input className="inputSignUp"  ref={mail} type="text" placeholder="Enter your email"/>
                     </label>
 
-                    <label>Password
-                        <input ref={pass} type="password" placeholder="Enter your password"/>
+                    <label className="labelSignUp">Password
+                        <input className="inputSignUp"  ref={pass} type="password" placeholder="Enter your password"/>
                     </label>
                     <button className="botonSubmit">Send</button>
                 </form>

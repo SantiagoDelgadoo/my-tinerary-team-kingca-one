@@ -5,13 +5,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/*   .containerGrande {
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgba(57, 53, 53, 0.362);
-  position: absolute;
-}  */
-
 .FirstContainer {
   color: white;
   min-height: 100vh;
@@ -27,7 +20,7 @@
   min-height: 20vh;
   display: flex;
   width: 100%;
-  background-color: rgba(15, 14, 14, 0.596);
+  background-color:rgb(20, 20, 20);
   top: 0px;
   display: flex;
   align-items: center;
@@ -247,7 +240,16 @@ label {
     cursor: pointer;
   }
 
-input {
+  .labelSignUp {
+    width: 85%;
+    margin: 1rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+.inputSignUp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,6 +260,181 @@ input {
   border-radius: 4px;
   cursor: pointer;
 }
+
+
+/* --------------------------------------------------ARRANCA CITIES------------------------------------------------- */
+fieldset {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.containerSearchCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 30px; */
+  min-height: 10vh;
+}
+
+.labelCities {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputCities {
+  margin: 6px;
+}
+
+.containerSearchcities {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.searchCities {
+  border: none;
+  border: solid 3px #EA5318;
+  width: 500px;
+  height: 35px;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+}
+
+
+.subtituloCities {
+  color: #EA5318;
+  font-size: 35px;
+}
+
+.ContainerHeaderCities {
+  background-image: url(../public/img/img-header-mano.jpg);
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerCardsCities {
+  padding: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCards {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  height: 380px;
+  background-color: white;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.cardImg {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.textosCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.subtituloCitiesCard {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 48%;
+  left: 0%;
+  width: 100%;
+  background-color: #2020209d;
+  padding: 10px 0px;
+}
+
+.TitulosDeCities {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonDetailsCities {
+  width: 360px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #EA5318;
+  color: white;
+  border: none;
+}
+
+.buttonDetailsCities:hover {
+  background-color:#467BE7
+}
+
+
+/* ARRANCA NEWCITY */
+.containerNewCity {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerFormCities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.containerFormCities input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.containerFormCities label {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -387,6 +564,16 @@ padding: 0.5rem;
     display: none;
   }
 }
+@media (max-width: 432px) {
+  .containerCards{
+    width: 320px;
+    height: 340px;
+  }
+  .buttonDetailsCities {
+    width: 320px;
+    height: 45px;
+}
+}
 @media (max-width: 768px) {
   .filter-select{
     width: 80%;
@@ -459,16 +646,43 @@ padding: 0.5rem;
   .subtituloSignUp {
     text-align: center;
   }
+  .subtituloCities {
+    text-align: center;
+  }
 }
+
+@media (max-width: 932px) {
+  .containerSearchCheck {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 5px;
+  }
+  }
 
 
 @media (max-width: 850px) {
   h1 {
     font-size: 60px;
   }
+  .containerSearchCheck {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 5px;
+  }
   }
 
 @media (max-width: 630px) {
+  .tituloCities{
+    font-size: 30px;
+  }
+  .searchCities {
+    width: 300px;
+  }
+
+  .subtituloCities {
+    font-size: 25px;
+  }
+
   h1 {
     font-size: 40px;
   }
