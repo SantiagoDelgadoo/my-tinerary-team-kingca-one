@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import Welcome from './pages/Welcome';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import Hotels from './pages/Hotels';
 import Cities from './pages/Cities';
 import NewCity from './pages/NewCity';
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Routes>
     <Route path="" element={<Welcome/>}></Route>
     <Route path="/home" element={<Welcome/>}></Route>
+    <Route path="/hotels" element={<Hotels/>}></Route>
     <Route path="/cities" element={<Cities/>}></Route>
     <Route path="*" element={<NotFound/>}></Route>
     <Route path="/signup" element={<SignUp/>}></Route>
