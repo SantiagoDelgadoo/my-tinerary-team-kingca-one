@@ -15,6 +15,7 @@ import SignIn from './pages/SignIn';
 import Hotels from './pages/Hotels';
 import Cities from './pages/Cities';
 import NewCity from './pages/NewCity';
+import DetailsHotel from './pages/DetailsHotel';
 import DetailsCities from './pages/DetailsCities';
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
     <Route path="/signup" element={<SignUp/>}></Route>
     <Route path="/signin" element={<SignIn/>}></Route>
     <Route path="/newcity" element={<NewCity/>}></Route>
+    <Route path="/details/:id" element={<DetailsHotel/>}></Route>
     <Route path="/details/:id" element={<DetailsCities/>}></Route>
     </Routes>
     </Main>

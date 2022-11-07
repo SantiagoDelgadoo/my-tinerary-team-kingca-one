@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import places from "../data/places";
 import SearchBar from "./FormText";
+import { Link as LinkRouter, NavLink } from 'react-router-dom'
 
 export default function CardHotels() {
   let arrayOfPlaces = places;
@@ -70,7 +71,10 @@ export default function CardHotels() {
               <h3 className="subtituloCitiesCard">{place.name}</h3>
             </div>
             <div>
-              <button className="buttonDetailsCities">More Details</button>
+              <button className="buttonDetailsCities">
+                <NavLink to={`/details/${place.id}`}>Details
+                </NavLink> 
+              </button>
             </div>
           </div>
         );
