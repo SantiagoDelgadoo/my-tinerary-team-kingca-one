@@ -72,7 +72,7 @@ export default function CardHotels() {
             </div>
             <div>
               <button className="buttonDetailsCities">
-                <NavLink to={`/details/${place.id}`}>Details
+                <NavLink to={`/detailsHotel/${place.id}`}>Details
                 </NavLink> 
               </button>
             </div>
