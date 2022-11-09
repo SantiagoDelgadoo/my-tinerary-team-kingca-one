@@ -212,12 +212,10 @@ label {
   cursor: pointer;
   text-align: start;
 }
-input{
+input {
   justify-content: center;
   align-self: flex-start;
 }
-
-
 
 .botonSubmit {
   border-radius: 6px;
@@ -725,13 +723,13 @@ h2 {
     align-items: center;
     justify-content: center;
   }
-  .containerForm >form>label {
+  .containerForm > form > label {
     width: 290px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .containerForm >form>label>input {
+  .containerForm > form > label > input {
     align-self: center;
   }
   .botonSubmit {
@@ -1136,8 +1134,8 @@ fieldset {
   width: 100%;
   justify-content: space-around;
 }
-@media (max-width: 1199px){
-  .containerSingup{
+@media (max-width: 1199px) {
+  .containerSingup {
     width: 60rem;
     flex-direction: column;
   }
@@ -1151,7 +1149,7 @@ fieldset {
     align-self: center;
     justify-self: center;
   }
-  .ContainerBotonesSingUp>form{
+  .ContainerBotonesSingUp > form {
     justify-content: center;
   }
   .containerForm {
@@ -1161,7 +1159,7 @@ fieldset {
     justify-content: center;
     align-items: center;
   }
-  .ContainerBotonesSingUp>h4{
+  .ContainerBotonesSingUp > h4 {
     width: auto;
     height: auto;
     display: flex;
@@ -1169,7 +1167,7 @@ fieldset {
     align-self: center;
     margin: 0;
   }
-  .ContainerBotonesSingUp>a{
+  .ContainerBotonesSingUp > a {
     width: 20rem;
     padding: 10px;
     display: flex;
@@ -1177,17 +1175,16 @@ fieldset {
     justify-content: center;
     align-items: center;
   }
-  .ContainerBotonesSingUp>a>button{
+  .ContainerBotonesSingUp > a > button {
     align-self: center;
   }
-  .containerForm>form>label{
+  .containerForm > form > label {
     width: 50%;
     justify-content: center;
   }
-  .botonSubmit{
+  .botonSubmit {
     align-self: center;
   }
-
 }
 @media (max-width: 666px) {
   .cardDetailsHotel {
