@@ -49,9 +49,9 @@ export default function Carousel(props) {
 <div className='conteinerCarousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <div className='carousel'>
-<img src={cities[numberOfChange].photo} alt='sujeto' className='photoCarrusel'/>
-<img src={cities[numberOfChange+1].photo} alt='sujeto' className='photoCarrusel'/>
-<img src={cities[numberOfChange+2].photo} alt='sujeto' className='photoCarrusel'/>
+<img src={cities[numberOfChange].photo} alt={cities[numberOfChange+0].photo} className='photoCarrusel'/>
+<img src={cities[numberOfChange+1].photo} alt={cities[numberOfChange+1].photo} className='photoCarrusel'/>
+<img src={cities[numberOfChange+2].photo} alt={cities[numberOfChange+2].photo} className='photoCarrusel'/>
 </div>
 <Arrow icon={">"} onClick={next}/>
 </div>
@@ -61,9 +61,9 @@ export default function Carousel(props) {
 <div className='conteinerCarousel'>
 <Arrow icon={"<"} onClick={prev}/>
 <div className='carousel'>
-<img src={places[numberOfChange+2].photo[0]} alt='sujeto' className='photoCarrusel'/>
-<img src={places[numberOfChange+2].photo[1]} alt='sujeto' className='photoCarrusel'/>
-<img src={places[numberOfChange+2].photo[2]} alt='sujeto' className='photoCarrusel'/>
+<img src={places[numberOfChange+2].photo[0]} alt={places[numberOfChange+2].name} className='photoCarrusel'/>
+<img src={places[numberOfChange+2].photo[1]} alt={places[numberOfChange+2].name}  className='photoCarrusel'/>
+<img src={places[numberOfChange+2].photo[2]} alt={places[numberOfChange+2].name}  className='photoCarrusel'/>
 </div>
 
 <Arrow icon={">"} onClick={next}/>
