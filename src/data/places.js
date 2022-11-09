@@ -74,7 +74,7 @@ let places = [
     {
         id: "hot6",
         name: "Mangaart Hotel",
-        photo: ["https://visit-chiyoda.com/wp-content/uploads/2019/11/P2100209.jpg","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://lh3.googleusercontent.com/p/AF1QipO82OwFegvFxKmHRmn90ivVB6Y0Lc0qvHL0jGwn=w296-h202-n-k-rw-no-v1"],
+        photo: ["https://visit-chiyoda.com/wp-content/uploads/2019/11/P2100209.jpg","https://lh3.googleusercontent.com/p/AF1QipMo68UVPmTtpiOZX5SuH0PyCL2os3S1OhaH-VX8=w296-h202-n-k-rw-no-v1","https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/179445661.jpg?k=1a80e5eb79f42479065a06c7f24ea600be80e2e8894e1f7d3603d2f7387c7f3e&o=&hp=1"],
         capacity: 14000,
         description: "Welcome to the world of the Manga Brain.In our hotel, reality is strictly forbidden.We want you to spend the entire night absorbed in the world of the works.",
         cityId: "city1",
@@ -92,7 +92,7 @@ let places = [
     {
         id: "hot8",
         name: "DoubleTree by Hilton Hotel",
-        photo: ["https://assets.hiltonstatic.com/image/upload/t_MODx%20-%20Masthead/t_MODx%20-%20Masthead/v1597861370/Imagery/Property%20Photography/DoubleTree%20Suites/S/SCLSKDT/Facade%20Hotel10.jpg","https://lh5.googleusercontent.com/p/AF1QipMEy0CfdwZRlYlzQsxQvwTc8fVMOWdGfrXFtiXa=w253-h168-k-no","https://lh5.googleusercontent.com/p/AF1QipNiFdE3k6BK86RTNaYWObovF-WTSAbbwz-UXLOt=w253-h168-k-no"],
+        photo: ["https://assets.hiltonstatic.com/image/upload/t_MODx%20-%20Masthead/t_MODx%20-%20Masthead/v1597861370/Imagery/Property%20Photography/DoubleTree%20Suites/S/SCLSKDT/Facade%20Hotel10.jpg","https://pix10.agoda.net/hotelImages/295365/0/7cc68803d32f9b9b33e6ed5712391f18.jpg?ca=7&ce=1&s=1024x768","https://lh5.googleusercontent.com/p/AF1QipNiFdE3k6BK86RTNaYWObovF-WTSAbbwz-UXLOt=w253-h168-k-no"],
         capacity: 6000,
         description: "This luxurious and modern hotel faces the Hudson River, surrounded by restaurants, 3 blocks from the theaters of Times Square, a 6-minute walk from the Times Square-42 Street subway station and 1.6 km from the Empire State Building.",
         cityId: "city2",

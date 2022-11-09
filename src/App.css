@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .FirstContainer {
@@ -20,7 +20,7 @@
   min-height: 20vh;
   display: flex;
   width: 100%;
-  background-color:rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20);
   top: 0px;
   display: flex;
   align-items: center;
@@ -40,8 +40,8 @@ nav {
 }
 
 .buttonHeader:hover {
-  background-color: #467BE7;
-} 
+  background-color: #467be7;
+}
 
 ul {
   margin: 16px;
@@ -51,7 +51,7 @@ ul {
 }
 
 ul:hover {
-  border-bottom: 3px solid #EA5318;
+  border-bottom: 3px solid #ea5318;
   padding-bottom: 1rem;
 }
 
@@ -75,14 +75,13 @@ ul:hover {
 .usuario img {
   width: 50px;
 }
-
-.usuario {
+rgba .usuario {
   display: flex;
   flex-direction: column;
 }
 
 .usuario button {
-  background-color:#EA5318;
+  background-color: #ea5318;
   color: white;
   border: none;
   margin-top: 16px;
@@ -95,7 +94,7 @@ ul:hover {
 }
 
 .containerBurger button {
-  background-color:#EA5318;
+  background-color: #ea5318;
   color: white;
   border: none;
   margin-top: 16px;
@@ -104,14 +103,14 @@ ul:hover {
 }
 
 .subtituloHome1 {
-  color: #EA5318;
+  color: #ea5318;
   font-size: 35px;
   margin-left: 4rem;
   z-index: 2;
 }
 
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   color: white;
   font-size: 80px;
   font-weight: 400;
@@ -120,7 +119,7 @@ h1 {
 }
 
 .colorNaranjaDeLinea {
-  color: #EA5318;
+  color: #ea5318;
 }
 
 .containerSubtitulos {
@@ -135,14 +134,14 @@ h1 {
 .botones {
   display: flex;
   border-radius: 5px;
-  background-color: #EA5318;
+  background-color: #ea5318;
   border: none;
   padding: 10px 20px;
-  width: 240px;     
-  margin: 0px 10px ;
-  color: white;     
-  font-size: 1.1rem;     
-  cursor: pointer; 
+  width: 240px;
+  margin: 0px 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
   z-index: 200;
   margin-bottom: 1rem;
   justify-content: center;
@@ -152,7 +151,7 @@ h1 {
 }
 
 .botones:hover {
-  background-color: #467BE7;
+  background-color: #467be7;
 }
 
 .menuBurguer {
@@ -176,11 +175,11 @@ h1 {
   cursor: pointer;
 }
 
-.ContainerBotonesSingUp>h4 {
+.ContainerBotonesSingUp > h4 {
   width: 80%;
   cursor: pointer;
 }
-.ContainerBotonesSingUp>a {
+.ContainerBotonesSingUp > a {
   align-self: flex-start;
   cursor: pointer;
 }
@@ -216,7 +215,7 @@ label {
   border-radius: 6px;
   border: none;
   color: white;
-  background-color: #EA5318;
+  background-color: #ea5318;
   width: 300px;
   height: 40px;
   font-size: 14px;
@@ -225,29 +224,28 @@ label {
   cursor: pointer;
 }
 
+.botonSignIn {
+  color: white;
+  background-color: #ea5318;
+  border-radius: 6px;
+  border: none;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  margin: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
 
-  .botonSignIn {
-    color: white;
-    background-color: #EA5318;
-    border-radius: 6px;
-    border: none;
-    width: 150px;
-    height: 40px;
-    padding: 10px;
-    margin: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  .labelSignUp {
-    width: 85%;
-    margin: 1rem;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-  }
+.labelSignUp {
+  width: 85%;
+  margin: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
 
 .inputSignUp {
   display: flex;
@@ -260,7 +258,6 @@ label {
   border-radius: 4px;
   cursor: pointer;
 }
-
 
 /* --------------------------------------------------ARRANCA CITIES------------------------------------------------- */
 fieldset {
@@ -296,7 +293,7 @@ fieldset {
 
 .searchCities {
   border: none;
-  border: solid 3px #EA5318;
+  border: solid 3px #ea5318;
   width: 500px;
   height: 35px;
   border-radius: 8px;
@@ -304,9 +301,8 @@ fieldset {
   outline: none;
 }
 
-
 .subtituloCities {
-  color: #EA5318;
+  color: #ea5318;
   font-size: 35px;
 }
 
@@ -343,7 +339,8 @@ fieldset {
   background-color: white;
   color: black;
   border-radius: 20px 20px 20px 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .cardImg {
@@ -391,15 +388,14 @@ fieldset {
   font-size: 20px;
   font-weight: 700;
   border-radius: 0px 0px 20px 20px;
-  background-color: #EA5318;
+  background-color: #ea5318;
   color: white;
   border: none;
 }
 
 .buttonDetailsCities:hover {
-  background-color:#467BE7
+  background-color: #467be7;
 }
-
 
 /* ARRANCA NEWCITY */
 .containerNewCity {
@@ -466,7 +462,6 @@ fieldset {
   font-size: 16px;
 }
 
-
 /* //////////////////////////////////////////////////////ARRANCA DETAILS CITIES/////////////////////////////////////////////////////////////// */
 
 .ContainerDetailsCities {
@@ -484,7 +479,7 @@ fieldset {
   width: 750px;
   height: 450px;
   border-radius: 20px;
-  background-color:#ea5418b9;
+  background-color: #ea5418b9;
 }
 
 .cardDetails img {
@@ -515,7 +510,7 @@ fieldset {
   color: white;
 }
 
-.titleCities{
+.titleCities {
   font-size: 30px;
   font-weight: 700;
 }
@@ -534,14 +529,10 @@ fieldset {
   align-items: center;
 }
 
-
-
-
-
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.botonUp{
-  position:fixed;
+.botonUp {
+  position: fixed;
   bottom: 8rem;
   right: 5rem;
   height: 50px;
@@ -549,41 +540,41 @@ fieldset {
   font-size: 50px;
   border-radius: 40px;
 }
-main{
-width: 100%;
-min-height: 100vh;
+main {
+  width: 100%;
+  min-height: 100vh;
 }
-.carousel{
-width:100%;
-min-height: 40vh;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-gap: 1rem;
-background-color: rgb(248, 248, 248);
-border-radius: 2.5rem;
+.carousel {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(248, 248, 248);
+  border-radius: 2.5rem;
+  box-shadow: 0px 43px 20px -8px rgba(29, 29, 29, 0.75);
 }
-.carousel>img{
-  width: 500px;
-  height: 20rem;
+.carousel > img {
+  width: 400px;
+  height: 15rem;
   padding: 1rem;
 }
-h2{
-color: #EA5318;
- align-self: flex-start;
- padding: 2rem;
- padding-left: 10rem;
- font-size: 3rem;
+h2 {
+  color: #ea5318;
+  align-self: flex-start;
+  padding: 2rem;
+  padding-left: 15rem;
+  font-size: 2rem;
 }
 
-.photoCarrusel{
+.photoCarrusel {
   width: 25rem;
   height: 90%;
   border-radius: 2rem;
-  
 }
-.Footer{
+.Footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -591,42 +582,42 @@ color: #EA5318;
   height: 20vh;
   background-color: rgb(20, 20, 20);
 }
-.Footer>p{
+.Footer > p {
   color: #e7e7e7;
 }
-.Footer-nav{
+.Footer-nav {
   display: flex;
   flex-direction: column;
 }
-.Footer-nav>a{
-padding: 0.5rem;
+.Footer-nav > a {
+  padding: 0.5rem;
 }
-.FooterGit{
+.FooterGit {
   display: flex;
   flex-direction: column;
 }
-.FooterGit>a{
+.FooterGit > a {
   padding: 0.5rem;
   color: white;
 }
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Footer-link{
+.Footer-link {
   color: #e7e7e7;
 }
-.btn-carousel{
+.btn-carousel {
   font-size: 2rem;
-  background-color: #e7e7e7; 
+  background-color: #e7e7e7;
   color: rgb(255, 255, 255);
   border: 2px solid rgb(248, 248, 248);
   border-radius: 2rem;
   height: 10rem;
   padding: 2rem;
 }
-.btn-carousel{
+.btn-carousel {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
@@ -636,53 +627,51 @@ padding: 0.5rem;
   color: white;
 }
 
-.conteinerCarousel{
+.conteinerCarousel {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.ErrorContainer{
+.ErrorContainer {
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
+  box-shadow: 0px 43px 20px -8px rgba(29, 29, 29, 0.75);
 }
-.ErrorContainer>h2{
+.ErrorContainer > h2 {
   width: 100%;
   text-align: center;
   padding: 0px;
 }
-.ErrorContainer>a{
+.ErrorContainer > a {
   padding: 1.5rem;
   margin: 0;
 }
-  
+
 @media (min-width: 768px) {
   .menuBurguer {
     display: none;
   }
 }
 @media (max-width: 432px) {
-  .containerCards{
+  .containerCards {
     width: 320px;
     height: 340px;
   }
   .buttonDetailsCities {
     width: 320px;
     height: 45px;
-}
+  }
 }
 
 @media (max-width: 768px) {
-  .filter-select{
+  .filter-select {
     width: 80%;
     height: 2rem;
   }
-  .filter-select>select{
+  .filter-select > select {
     width: 80%;
   }
   nav {
@@ -703,8 +692,8 @@ padding: 0.5rem;
     justify-content: center;
     cursor: pointer;
   }
-  .containerForm>a{
-    display:flex;
+  .containerForm > a {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -725,7 +714,7 @@ padding: 0.5rem;
     align-items: center;
     justify-content: center;
   }
-  label{
+  label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -734,7 +723,7 @@ padding: 0.5rem;
     border-radius: 6px;
     border: none;
     color: white;
-    background-color: #EA5318;
+    background-color: #ea5318;
     width: 290px;
     height: 40px;
     font-size: 14px;
@@ -742,9 +731,8 @@ padding: 0.5rem;
     margin: 1rem;
     cursor: pointer;
   }
-  .Footer{
+  .Footer {
     padding-top: 2rem;
-
   }
   .subtituloSignUp {
     text-align: center;
@@ -760,14 +748,13 @@ padding: 0.5rem;
     margin-top: 1rem;
     gap: 5px;
   }
-  }
-
+}
 
 @media (max-width: 850px) {
-.cardDetails {
-  width: 400px;
-  height: 350px;
-}
+  .cardDetails {
+    width: 400px;
+    height: 350px;
+  }
   h1 {
     font-size: 60px;
   }
@@ -776,10 +763,15 @@ padding: 0.5rem;
     margin-top: 1rem;
     gap: 5px;
   }
-  }
+}
 
+@media (max-width: 1432px) {
+  .carousel {
+    box-shadow: none;
+  }
+}
 @media (max-width: 630px) {
-  .tituloCities{
+  .tituloCities {
     font-size: 30px;
   }
   .searchCities {
@@ -794,7 +786,7 @@ padding: 0.5rem;
     font-size: 40px;
   }
   .subtituloHome1 {
-  font-size: 20px;
+    font-size: 20px;
   }
   .logo img {
     width: 40px;
@@ -808,68 +800,67 @@ padding: 0.5rem;
 }
 
 @media (max-width: 769px) {
-  .conteinerCarousel{
+  .conteinerCarousel {
     padding: 2rem;
+    box-shadow: none;
   }
-  .btn-carousel{
+  .btn-carousel {
     display: none;
     width: 5px;
     font-size: 1rem;
   }
-  .carousel>img{
+  .carousel > img {
     width: 320px;
     height: 15rem;
     padding: 1rem;
   }
-  h2{
-    color: #EA5318;
-     align-self: flex-start;
-     padding: 2rem;
-     padding-left: 5rem;
-     font-size: 3rem;
-    }
-    .botonUp{
-      position:fixed;
-      bottom: 2rem;
-      right: 2rem;
-      height: 30px;
-      width: 30px;
-      font-size: 20px;
-      border-radius: 30px;
-    }
-    .Footer{
-      display: flex;
-      height: auto;
-      flex-direction: column ;
-    }
-    .Footer>p{
-      color: #e7e7e7;
-      padding: 10px;
-    }
+  h2 {
+    color: #ea5318;
+    align-self: flex-start;
+    padding: 2rem;
+    padding-left: 5rem;
+    font-size: 2rem;
   }
-    @media (max-width: 386px) {
-      .conteinerCarousel{
-        padding: 0rem;
-      }
-      .btn-carousel{
-        display: none;
-        width: 5px;
-        font-size: 1rem;
-      }
-      .carousel>img{
-        width: 310px;
-        height: 15rem;
-        padding: 4px;
-      }
-      .cardDetails {
-        width: 300px;
-        height: 500px;
-      }
+  .botonUp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .Footer {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .Footer > p {
+    color: #e7e7e7;
+    padding: 10px;
+  }
+}
+@media (max-width: 386px) {
+  .conteinerCarousel {
+    padding: 0rem;
+  }
+  .btn-carousel {
+    display: none;
+    width: 5px;
+    font-size: 1rem;
+  }
+  .carousel > img {
+    width: 310px;
+    height: 15rem;
+    padding: 4px;
+  }
+  .cardDetails {
+    width: 300px;
+    height: 500px;
+  }
 }
 
-
-
-.containerCityHotels{
+.containerCityHotels {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -877,30 +868,30 @@ padding: 0.5rem;
   padding: 2rem;
 }
 
-.filters{
+.filters {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap:2rem;
+  gap: 2rem;
 }
-.filters>div{
-  width:15rem;
+.filters > div {
+  width: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.filters>div>form{
+.filters > div > form {
   width: 100%;
   justify-self: center;
-  align-self: center ;
+  align-self: center;
 }
-.filters>div>form>label>input{
+.filters > div > form > label > input {
   width: 100%;
   height: 2rem;
   border: 2px solid gray;
 }
-.filter-select{
+.filter-select {
   width: 100%;
   height: 2rem;
 }
@@ -937,7 +928,7 @@ fieldset {
 
 .searchCities {
   border: none;
-  border: solid 3px #EA5318;
+  border: solid 3px #ea5318;
   width: 500px;
   height: 35px;
   border-radius: 8px;
@@ -945,9 +936,8 @@ fieldset {
   outline: none;
 }
 
-
 .subtituloCities {
-  color: #EA5318;
+  color: #ea5318;
   font-size: 35px;
 }
 
@@ -984,7 +974,8 @@ fieldset {
   background-color: white;
   color: black;
   border-radius: 20px 20px 20px 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .cardImg {
@@ -1032,21 +1023,20 @@ fieldset {
   font-size: 20px;
   font-weight: 700;
   border-radius: 0px 0px 20px 20px;
-  background-color: #EA5318;
+  background-color: #ea5318;
   color: white;
   border: none;
 }
 
 .buttonDetailsCities:hover {
-  background-color:#467BE7
+  background-color: #467be7;
 }
 
-
-.containerCardDetails{
+.containerCardDetails {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;  
+  height: 80vh;
 }
 
 .cardDetailsHotel {
@@ -1055,35 +1045,34 @@ fieldset {
   height: 30rem;
   border-radius: 30px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-              -15px -15px 30px #ffffff;
- }
- .cardPhoto{
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+.cardPhoto {
   width: 50%;
   height: 100%;
- }
- .cardPhoto>img{
+}
+.cardPhoto > img {
   width: 100%;
   height: 100%;
   border-radius: 30px 0px 0px 30px;
- }
- .cardText{
+}
+.cardText {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- width: 50%;
+  width: 50%;
   height: 100%;
   padding: 1rem;
- }
- .cardText>h2{
+}
+.cardText > h2 {
   padding: 0px;
-  font-size:xx-large;
- }
- .cardText>p>span{
+  font-size: xx-large;
+}
+.cardText > p > span {
   font-weight: bold;
- }
+}
 
- .containerCardDetailsEvents{
+.containerCardDetailsEvents {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1091,49 +1080,48 @@ fieldset {
   width: 100%;
   flex-wrap: wrap;
   gap: 2rem;
- }
- 
- .cardDetailsEvent{
+}
+
+.cardDetailsEvent {
   display: flex;
   flex-direction: column;
   width: 20rem;
   height: 22rem;
   border-radius: 30px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-              -15px -15px 30px #ffffff;
- }
- .cardPhotoEvents{
-  width: 100% ;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+.cardPhotoEvents {
+  width: 100%;
   height: 50%;
- }
- .cardPhotoEvents>img{
+}
+.cardPhotoEvents > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 30px 30px 0px 0px;
- }
- .cardTextEvents{
+}
+.cardTextEvents {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
- }
- .cardTextEvents>h2{
+}
+.cardTextEvents > h2 {
   padding: 0.5rem;
-  font-size:xx-large;
- }
- .cardTextEvents>div>p>span{
+  font-size: xx-large;
+}
+.cardTextEvents > div > p > span {
   font-weight: bold;
- }
-.cardTextEvents>div{
+}
+.cardTextEvents > div {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
 
-@media (max-width: 666px){
+@media (max-width: 666px) {
   .cardDetailsHotel {
     display: flex;
     flex-direction: column;
@@ -1141,31 +1129,30 @@ fieldset {
     height: 70vh;
     border-radius: 30px;
     background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-                -15px -15px 30px #ffffff;
-   }
-   .cardPhoto{
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  }
+  .cardPhoto {
     width: 100%;
     height: 50%;
-   }
-   .cardPhoto>img{
+  }
+  .cardPhoto > img {
     width: 100%;
     height: 100%;
     border-radius: 30px 30px 0px 0px;
-   }
-   .cardText{
+  }
+  .cardText {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
     height: 100%;
     padding: 1rem;
-   }
-   .cardText>h2{
+  }
+  .cardText > h2 {
     padding: 0px;
-    font-size:xx-large;
-   }
-   .cardText>p>span{
+    font-size: xx-large;
+  }
+  .cardText > p > span {
     font-weight: bold;
-   }
+  }
 }
