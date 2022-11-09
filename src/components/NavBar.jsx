@@ -51,11 +51,11 @@ export default function NavBar() {
         {seeLogin ? (
           <div className="usuario">
             <img src="./img/usuario.png" onClick={change} alt="Usuario" />
-            <NavLink style={{textDecoration: 'none'}}to="/signup">
-            <button className="buttonHeader">Login</button>
+            <NavLink style={{textDecoration: 'none'}}to="/signin">
+            <button className="buttonHeader">SignIn</button>
             </NavLink>
-            <NavLink style={{textDecoration: 'none'}}to="/logout">
-            <button className="buttonHeader">Logout</button>
+            <NavLink style={{textDecoration: 'none'}}to="/signup">
+            <button className="buttonHeader">SignUp</button>
             </NavLink>
           </div>
         ) : (
