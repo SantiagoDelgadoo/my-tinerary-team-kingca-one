@@ -160,19 +160,26 @@ h1 {
 /*-------------------------------------------------------- EMPIEZA SING UP--------------------------------------------------------- */
 
 .containerSingup {
+  width: 80%;
   z-index: 1;
-  margin-top: 9rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
   cursor: pointer;
+  padding: 5rem;
 }
 
 .ContainerBotonesSingUp {
+  width: 25rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   z-index: 100;
   cursor: pointer;
+}
+.containerForm {
+  width: 25rem;
 }
 
 .ContainerBotonesSingUp > h4 {
@@ -205,10 +212,9 @@ label {
   cursor: pointer;
   text-align: start;
 }
-
-.containerForm {
-  width: 50%;
-  flex-grow: 1;
+input {
+  justify-content: center;
+  align-self: flex-start;
 }
 
 .botonSubmit {
@@ -216,12 +222,13 @@ label {
   border: none;
   color: white;
   background-color: #ea5318;
-  width: 300px;
+  width: 250px;
   height: 40px;
   font-size: 14px;
   font-weight: 700;
   margin: 1rem;
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .botonSignIn {
@@ -239,6 +246,9 @@ label {
 }
 
 .labelSignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 85%;
   margin: 1rem;
   text-align: center;
@@ -250,7 +260,7 @@ label {
 .inputSignUp {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 4px;
   width: 300px;
   height: 35px;
@@ -686,7 +696,7 @@ h2 {
   }
   form {
     display: flex;
-    width: 100%;
+    width: 45rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -699,7 +709,6 @@ h2 {
   }
   .containerSingup {
     z-index: 1;
-    margin-top: 9rem;
     display: flex;
     cursor: pointer;
     flex-direction: column;
@@ -714,10 +723,14 @@ h2 {
     align-items: center;
     justify-content: center;
   }
-  label {
+  .containerForm > form > label {
+    width: 290px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .containerForm > form > label > input {
+    align-self: center;
   }
   .botonSubmit {
     border-radius: 6px;
@@ -730,6 +743,7 @@ h2 {
     font-weight: 700;
     margin: 1rem;
     cursor: pointer;
+    align-self: center;
   }
   .Footer {
     padding-top: 2rem;
@@ -1120,7 +1134,58 @@ fieldset {
   width: 100%;
   justify-content: space-around;
 }
-
+@media (max-width: 1199px) {
+  .containerSingup {
+    width: 60rem;
+    flex-direction: column;
+  }
+  .ContainerBotonesSingUp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+  }
+  .ContainerBotonesSingUp > form {
+    justify-content: center;
+  }
+  .containerForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .ContainerBotonesSingUp > h4 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 0;
+  }
+  .ContainerBotonesSingUp > a {
+    width: 20rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ContainerBotonesSingUp > a > button {
+    align-self: center;
+  }
+  .containerForm > form > label {
+    width: 50%;
+    justify-content: center;
+  }
+  .botonSubmit {
+    align-self: center;
+  }
+}
 @media (max-width: 666px) {
   .cardDetailsHotel {
     display: flex;
