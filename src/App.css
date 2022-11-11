@@ -1,0 +1,1158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.FirstContainer {
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../public/img/img-camellos.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ContainerHome1 {
+  min-height: 20vh;
+  display: flex;
+  width: 100%;
+  background-color: rgb(20, 20, 20);
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  display: flex;
+  font-weight: 300;
+  z-index: 20;
+}
+
+.buttonHeader {
+  cursor: pointer;
+  width: 55px;
+  height: 20px;
+}
+
+.buttonHeader:hover {
+  background-color: #467be7;
+}
+
+ul {
+  margin: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+ul:hover {
+  border-bottom: 3px solid #ea5318;
+  padding-bottom: 1rem;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoLogo {
+  color: white;
+  font-size: 14px;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.usuario img {
+  width: 50px;
+}
+rgba .usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.usuario button {
+  background-color: #ea5318;
+  color: white;
+  border: none;
+  margin-top: 16px;
+  border-radius: 6px;
+}
+
+.containerBurger {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerBurger button {
+  background-color: #ea5318;
+  color: white;
+  border: none;
+  margin-top: 16px;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.subtituloHome1 {
+  color: #ea5318;
+  font-size: 35px;
+  margin-left: 4rem;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 400;
+  margin-left: 3rem;
+  z-index: 3;
+}
+
+.colorNaranjaDeLinea {
+  color: #ea5318;
+}
+
+.containerSubtitulos {
+  height: 50vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.botones {
+  display: flex;
+  border-radius: 5px;
+  background-color: #ea5318;
+  border: none;
+  padding: 10px 20px;
+  width: 240px;
+  margin: 0px 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 200;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.botones:hover {
+  background-color: #467be7;
+}
+
+.menuBurguer {
+  width: 35px;
+}
+/*-------------------------------------------------------- EMPIEZA SING UP--------------------------------------------------------- */
+
+.containerSingup {
+  z-index: 1;
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.ContainerBotonesSingUp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.ContainerBotonesSingUp > h4 {
+  width: 80%;
+  cursor: pointer;
+}
+.ContainerBotonesSingUp > a {
+  align-self: flex-start;
+  cursor: pointer;
+}
+.subtituloSignUp {
+  text-align: start;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+label {
+  width: 85%;
+  margin: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: start;
+}
+
+.containerForm {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.botonSubmit {
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: #ea5318;
+  width: 300px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.botonSignIn {
+  color: white;
+  background-color: #ea5318;
+  border-radius: 6px;
+  border: none;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  margin: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.labelSignUp {
+  width: 85%;
+  margin: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.inputSignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------ARRANCA CITIES------------------------------------------------- */
+fieldset {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.containerSearchCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 30px; */
+  min-height: 10vh;
+}
+
+.labelCities {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputCities {
+  margin: 6px;
+}
+
+.containerSearchcities {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.searchCities {
+  border: none;
+  border: solid 3px #ea5318;
+  width: 500px;
+  height: 35px;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+}
+
+.subtituloCities {
+  color: #ea5318;
+  font-size: 35px;
+}
+
+.ContainerHeaderCities {
+  background-image: url(../public/img/img-header-mano.jpg);
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerCardsCities {
+  padding: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCards {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  height: 380px;
+  background-color: white;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.cardImg {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.textosCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.subtituloCitiesCard {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 48%;
+  left: 0%;
+  width: 100%;
+  background-color: #2020209d;
+  padding: 10px 0px;
+}
+
+.TitulosDeCities {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonDetailsCities {
+  width: 360px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #ea5318;
+  color: white;
+  border: none;
+}
+
+.buttonDetailsCities:hover {
+  background-color: #467be7;
+}
+
+/* ARRANCA NEWCITY */
+.containerNewCity {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerFormCities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.containerFormCities input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.containerFormCities label {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.containerNewPlace {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerFormPlace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.containerFormPlace input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.containerFormPlace label {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* //////////////////////////////////////////////////////ARRANCA DETAILS CITIES/////////////////////////////////////////////////////////////// */
+
+.ContainerDetailsCities {
+  background-image: url(/public/img/img-camellos.jpg);
+  min-height: 80vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDetails {
+  display: flex;
+  width: 750px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: #ea5418b9;
+}
+
+.cardDetails img {
+  border-radius: 20px 0px 0px 20px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fatherPhoto {
+  width: 50%;
+  height: 100%;
+}
+
+.fatherPhoto img {
+  width: 100%;
+  height: 100%;
+}
+
+.fatherDescription {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.titleCities {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.descriptionCities {
+  font-size: 20px;
+  margin-top: 3rem;
+}
+
+/* --------------------------------------------------------HOTELES DE CITIES-------------------------------------------------------------------- */
+
+.fatherHotel {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.botonUp {
+  position: fixed;
+  bottom: 8rem;
+  right: 5rem;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  border-radius: 40px;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+.carousel {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(248, 248, 248);
+  border-radius: 2.5rem;
+  box-shadow: 0px 43px 20px -8px rgba(29, 29, 29, 0.75);
+}
+.carousel > img {
+  width: 400px;
+  height: 15rem;
+  padding: 1rem;
+}
+h2 {
+  color: #ea5318;
+  align-self: flex-start;
+  padding: 2rem;
+  padding-left: 15rem;
+  font-size: 2rem;
+}
+
+.photoCarrusel {
+  width: 25rem;
+  height: 90%;
+  border-radius: 2rem;
+}
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+  height: 20vh;
+  background-color: rgb(20, 20, 20);
+}
+.Footer > p {
+  color: #e7e7e7;
+}
+.Footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+.Footer-nav > a {
+  padding: 0.5rem;
+}
+.FooterGit {
+  display: flex;
+  flex-direction: column;
+}
+.FooterGit > a {
+  padding: 0.5rem;
+  color: white;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Footer-link {
+  color: #e7e7e7;
+}
+.btn-carousel {
+  font-size: 2rem;
+  background-color: #e7e7e7;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(248, 248, 248);
+  border-radius: 2rem;
+  height: 10rem;
+  padding: 2rem;
+}
+.btn-carousel {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn-carousel:hover {
+  background-color: gray;
+  color: white;
+}
+
+.conteinerCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.ErrorContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 43px 20px -8px rgba(29, 29, 29, 0.75);
+}
+.ErrorContainer > h2 {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+.ErrorContainer > a {
+  padding: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .menuBurguer {
+    display: none;
+  }
+}
+@media (max-width: 432px) {
+  .containerCards {
+    width: 320px;
+    height: 340px;
+  }
+  .buttonDetailsCities {
+    width: 320px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-select {
+    width: 80%;
+    height: 2rem;
+  }
+  .filter-select > select {
+    width: 80%;
+  }
+  nav {
+    display: none;
+  }
+  .containerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+  }
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .containerForm > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerSingup {
+    z-index: 1;
+    margin-top: 9rem;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+  }
+  .FirstContainer {
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../public/img/img-camellos.jpg);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .botonSubmit {
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: #ea5318;
+    width: 290px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .Footer {
+    padding-top: 2rem;
+  }
+  .subtituloSignUp {
+    text-align: center;
+  }
+  .subtituloCities {
+    text-align: center;
+  }
+}
+
+@media (max-width: 932px) {
+  .containerSearchCheck {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .cardDetails {
+    width: 400px;
+    height: 350px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .containerSearchCheck {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1432px) {
+  .carousel {
+    box-shadow: none;
+  }
+}
+@media (max-width: 630px) {
+  .tituloCities {
+    font-size: 30px;
+  }
+  .searchCities {
+    width: 300px;
+  }
+
+  .subtituloCities {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  .subtituloHome1 {
+    font-size: 20px;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .usuario img {
+    width: 25px;
+  }
+  .botones {
+    width: 120px;
+  }
+}
+
+@media (max-width: 769px) {
+  .conteinerCarousel {
+    padding: 2rem;
+    box-shadow: none;
+  }
+  .btn-carousel {
+    display: none;
+    width: 5px;
+    font-size: 1rem;
+  }
+  .carousel > img {
+    width: 320px;
+    height: 15rem;
+    padding: 1rem;
+  }
+  h2 {
+    color: #ea5318;
+    align-self: flex-start;
+    padding: 2rem;
+    padding-left: 5rem;
+    font-size: 2rem;
+  }
+  .botonUp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .Footer {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .Footer > p {
+    color: #e7e7e7;
+    padding: 10px;
+  }
+}
+@media (max-width: 386px) {
+  .conteinerCarousel {
+    padding: 0rem;
+  }
+  .btn-carousel {
+    display: none;
+    width: 5px;
+    font-size: 1rem;
+  }
+  .carousel > img {
+    width: 310px;
+    height: 15rem;
+    padding: 4px;
+  }
+  .cardDetails {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+.containerCityHotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.filters > div {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filters > div > form {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+.filters > div > form > label > input {
+  width: 100%;
+  height: 2rem;
+  border: 2px solid gray;
+}
+.filter-select {
+  width: 100%;
+  height: 2rem;
+}
+fieldset {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.containerSearchCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 30px; */
+  min-height: 10vh;
+}
+
+.labelCities {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputCities {
+  margin: 6px;
+}
+
+.containerSearchcities {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.searchCities {
+  border: none;
+  border: solid 3px #ea5318;
+  width: 500px;
+  height: 35px;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+}
+
+.subtituloCities {
+  color: #ea5318;
+  font-size: 35px;
+}
+
+.ContainerHeaderCities {
+  background-image: url(../public/img/img-header-mano.jpg);
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerCardsCities {
+  padding: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCards {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  height: 380px;
+  background-color: white;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.cardImg {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.textosCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.subtituloCitiesCard {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 48%;
+  left: 0%;
+  width: 100%;
+  background-color: #2020209d;
+  padding: 10px 0px;
+}
+
+.TitulosDeCities {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonDetailsCities {
+  width: 360px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #ea5318;
+  color: white;
+  border: none;
+}
+
+.buttonDetailsCities:hover {
+  background-color: #467be7;
+}
+
+.containerCardDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.cardDetailsHotel {
+  display: flex;
+  width: 45rem;
+  height: 30rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+.cardPhoto {
+  width: 50%;
+  height: 100%;
+}
+.cardPhoto > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 0px 0px 30px;
+}
+.cardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+}
+.cardText > h2 {
+  padding: 0px;
+  font-size: xx-large;
+}
+.cardText > p > span {
+  font-weight: bold;
+}
+
+.containerCardDetailsEvents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cardDetailsEvent {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 22rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+.cardPhotoEvents {
+  width: 100%;
+  height: 50%;
+}
+.cardPhotoEvents > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0px 0px;
+}
+.cardTextEvents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.cardTextEvents > h2 {
+  padding: 0.5rem;
+  font-size: xx-large;
+}
+.cardTextEvents > div > p > span {
+  font-weight: bold;
+}
+.cardTextEvents > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (max-width: 666px) {
+  .cardDetailsHotel {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70vh;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  }
+  .cardPhoto {
+    width: 100%;
+    height: 50%;
+  }
+  .cardPhoto > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 30px 0px 0px;
+  }
+  .cardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .cardText > h2 {
+    padding: 0px;
+    font-size: xx-large;
+  }
+  .cardText > p > span {
+    font-weight: bold;
+  }
+}
