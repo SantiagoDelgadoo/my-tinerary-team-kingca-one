@@ -392,7 +392,10 @@ fieldset {
   color: white;
   border: none;
 }
-
+.buttonDetailsCities>a{
+  color: white;
+  text-decoration: none;
+}
 .buttonDetailsCities:hover {
   background-color: #467be7;
 }

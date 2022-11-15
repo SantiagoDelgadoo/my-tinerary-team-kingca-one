@@ -1,2 +1,1 @@
- const base_url = 'htpp://localhost:8080'
- module.exports = base_url
+  export const base_url = 'http://localhost:8080'

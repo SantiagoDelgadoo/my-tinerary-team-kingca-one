@@ -1,14 +1,12 @@
 import React from "react";
 import { useState , useEffect} from "react";
-import places from "../data/places";
 import SearchBar from "./FormText";
-import { Link as LinkRouter, NavLink } from 'react-router-dom'
+import { Link as NavLink } from 'react-router-dom'
 import {base_url} from "../api/url";
 import axios from "axios";
 
 export default function CardHotels() {
-
-  let arrayOfPlaces = places;
+  let [hotels,setHotels] = useState([])
   let [filterText, SetFilterText] = useState("");
   let [selectValue, setSelectValue] = useState("");
   let inputSearch = (text) => {
@@ -16,40 +14,10 @@ export default function CardHotels() {
   };
 
   useEffect(()=>{
-    axios.get(`${base_url}/api/hotel`)
-      .then (response => console.log(response))
-  },[])
-
-  let ArrayFiltered = arrayOfPlaces.filter((place) =>
-    place.name.toLowerCase().includes(filterText.toLowerCase())
-  );
-  if ({ ArrayFiltered } === 0) {
-    ArrayFiltered = arrayOfPlaces;
-  }
-
-  if (selectValue === "ASC") {
-    ArrayFiltered.sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
-      return 0;
-    });
-  } else if (selectValue === "DESC") {
-    ArrayFiltered.sort((a, b) => {
-      if (a.name > b.name) {
-        return -1;
-      }
-      if (a.name < b.name) {
-        return 1;
-      }
-      return 0;
-    });
-  }
-
-  console.log(ArrayFiltered);
+    axios.get(`${base_url}/api/hotel/?name=${filterText}&order=${selectValue}`)
+      .then ((response) => setHotels(response.data.response))
+  },[hotels])
+ 
 
   return (
     <>
@@ -71,9 +39,9 @@ export default function CardHotels() {
         </div>
       </div>
 
-      {ArrayFiltered.map((place) => {
+      {hotels.map((place) => {
         return (
-          <div className="containerCards">
+          <div className="containerCards" key={place.id}>
             <div className="cardImg">
               <img src={place.photo[0]} alt="photo of Place" />
               <h3 className="subtituloCitiesCard">{place.name}</h3>
