@@ -1,16 +1,24 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import places from "../data/places";
 import SearchBar from "./FormText";
 import { Link as LinkRouter, NavLink } from 'react-router-dom'
+import {base_url} from "../api/url";
+import axios from "axios";
 
 export default function CardHotels() {
+
   let arrayOfPlaces = places;
   let [filterText, SetFilterText] = useState("");
   let [selectValue, setSelectValue] = useState("");
   let inputSearch = (text) => {
     SetFilterText(text.target.value);
   };
+
+  useEffect(()=>{
+    axios.get(`${base_url}/api/hotel`)
+      .then (response => console.log(response))
+  },[])
 
   let ArrayFiltered = arrayOfPlaces.filter((place) =>
     place.name.toLowerCase().includes(filterText.toLowerCase())
