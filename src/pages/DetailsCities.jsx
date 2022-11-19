@@ -10,7 +10,7 @@ export default function DetailsCities() {
     let {id} = useParams()
     let [itineraris,setItineraris] = useState([])
     useEffect(()=>{
-      axios.get(`http://localhost:8000/api/activity?cityId=${id}`)
+      axios.get(`http://localhost:8000/api/itinerary?cityId=${id}`)
       .then((response)=>setItineraris(response.data.id))
     },[])
   return (
