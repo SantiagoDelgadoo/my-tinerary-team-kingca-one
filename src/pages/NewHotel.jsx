@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import axios from 'axios'
 let postHotel = async function (hotel){
     axios
-    .post ('http://localhost:8080/api/hotel/',hotel)
+    .post ('http://localhost:8000/api/hotel/',hotel)
     .then ((Response)=>console.log(Response))
     .catch((Error)=>console.log(Error))
 }
