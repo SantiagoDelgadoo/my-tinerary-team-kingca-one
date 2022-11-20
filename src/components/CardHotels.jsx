@@ -15,7 +15,7 @@ export default function CardHotels() {
 
   useEffect(() => {
     axios
-      .get(`${base_url}/api/hotel/?name=${filterText}&order=${selectValue}`)
+      .get(`${base_url}/hotel/?name=${filterText}&order=${selectValue}`)
       .then((response) => setHotels(response.data.response));
   }, [filterText, selectValue]);
 
