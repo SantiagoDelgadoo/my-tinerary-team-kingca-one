@@ -10,7 +10,7 @@ export default function CardDetailsHotel() {
   console.log(id);
   useEffect(() => {
     axios
-      .get(`${base_url}/api/hotel/${id}`)
+      .get(`${base_url}/hotel/${id}`)
       .then((response) => setHotels(response.data.id));
   }, []);
 

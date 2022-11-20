@@ -11,7 +11,7 @@ export default function CardDetailsEvents() {
   console.log(id);
   useEffect(() => {
     axios
-      .get(`${base_url}/api/show?hotelId=${id}`)
+      .get(`${base_url}/show?hotelId=${id}`)
       .then((response) => setEvents(response.data.id));
   }, []);
 
