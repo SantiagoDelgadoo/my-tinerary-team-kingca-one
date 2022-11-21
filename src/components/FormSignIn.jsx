@@ -21,10 +21,10 @@ export default function SignIn() {
          <div className="containerForm">
                   <form ref={form} onSubmit= {User}>  
                       <label>Email
-                          <input ref={mail} type="text" placeholder="Enter your email"/>
+                          <input ref={mail} className="inputSignUp" type="text" placeholder="Enter your email"/>
                       </label>
                       <label>Password
-                          <input ref={pass} type="password" placeholder="Enter your password"/>
+                          <input ref={pass} className="inputSignUp" type="password" placeholder="Enter your password"/>
                       </label>
                       <button className="botonSubmit">Sign In</button>
                   </form>
