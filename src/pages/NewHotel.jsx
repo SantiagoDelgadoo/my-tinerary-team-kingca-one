@@ -1,14 +1,54 @@
 import React from 'react'
 import { useRef } from 'react'
 import axios from 'axios'
-let postHotel = async function (hotel){
-    axios
-    .post ('http://localhost:8000/api/hotel/',hotel)
-    .then ((Response)=>console.log(Response))
-    .catch((Error)=>console.log(Error))
-}
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {useNavigate } from 'react-router'
+
+
 export default function NewHotel() {
     let NewPlaceForm = useRef()
+    let navigate = useNavigate()
+
+    let postHotel = async function (hotel){
+        axios
+        .post ('http://localhost:8000/api/hotel/',hotel)
+        .then ((Response)=>{
+            if (Response.data.success){
+                toast.success("Hotel created", {
+                    position: "bottom-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
+                    setTimeout(function () {
+                        console.log(Response);
+                        navigate(`/detailsHotel/${Response.data.response._id}`);
+                      }, 3000)
+
+            }else{
+               Response.data.message.map((ms)=>{
+                    toast.error(`${ms}`, {
+                        position: "bottom-left",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        });
+                })
+    
+            }
+    
+        })
+        .catch((Error)=>console.log(Error))
+    }
     let submit = (place) => {
         place.preventDefault ()
         let NewPlace = {
@@ -25,6 +65,7 @@ export default function NewHotel() {
     }
   return (
     <div>
+    <ToastContainer />
     <div className='containerNewPlace'>
     <form ref={NewPlaceForm} onSubmit={submit} className='containerFormPlace'>
 
