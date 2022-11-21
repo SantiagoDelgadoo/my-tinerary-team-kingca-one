@@ -1,5 +1,7 @@
 import citiesReducer from "./citiesReducer"
+import hotelsReducer from "./hotelsReducer"
 const routeReducer = {
-    citiesReducer
+    citiesReducer,
+    hotelsReducer,
 }
-export default routeReducer //aca se juntan los reductores, se hace para tener mas prolijidad 
+export default routeReducer
