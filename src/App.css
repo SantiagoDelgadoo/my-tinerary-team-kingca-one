@@ -216,6 +216,7 @@ label {
   width: 50%;
   flex-grow: 1;
 }
+
 .containerFormItineraries form {
 margin-bottom: 5rem;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -384,6 +385,20 @@ fieldset {
   align-items: center;
   justify-content: space-evenly;
   
+}
+
+.ContainerHeaderCitiesBici {
+  background-image: url(../public/img/bici.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .ContainerHeaderItineraries {
@@ -1232,6 +1247,13 @@ fieldset {
   object-fit: cover;
   border-radius: 30px 30px 0px 0px;
 }
+
+.cardTextEventsCities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cardTextEvents {
   width: 100%;
   display: flex;
@@ -1317,6 +1339,15 @@ fieldset {
 }
 .labelEdit>input{
  width: 50%;
+}
+.containerCardDetailsEventsEdit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulitoo {
+  text-align: center;
 }
 
 .botonDeDelete {
