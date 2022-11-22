@@ -43,11 +43,11 @@ export default function CardDetailsEvents() {
               }
           return (
             <div className="cardMyshowEditContainer">
-              <div className="cardDetailsEvent">
-                <div className="cardPhotoEvents">
+              <div className="cardDetailsEdit">
+                <div className="cardPhotoEdit">
                   <img src={event.photo} alt="" />
                 </div>
-                <div className="cardTextEvents">
+                <div className="cardTextEdits">
                   <h2>{event.name}</h2>
                   <div>
                     <p>

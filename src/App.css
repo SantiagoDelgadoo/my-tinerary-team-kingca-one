@@ -620,7 +620,7 @@ fieldset {
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
-  margin-bottom: 7rem;
+  margin-bottom: 0.5rem;
   gap: 3rem;
   align-items: center;
 }
@@ -1374,3 +1374,38 @@ fieldset {
   margin: 0;
   width: 100%;
 }
+.containerFormShow form {
+  width: 30rem;
+  margin-bottom: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2rem;
+  border-radius: 1rem;
+  }
+  .containerFormShow form label {
+    margin: 0;
+  }
+  .formEdit>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .containerFormShow {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    .labelEdit{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .labelEdit>input{
+      justify-self: flex-end;
+      width: 70%;
+      border: #bebebe solid 3px;
+    }
+ 

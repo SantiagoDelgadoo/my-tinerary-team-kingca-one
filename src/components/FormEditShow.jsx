@@ -28,7 +28,7 @@ export default function FormEditShow() {
     dispatch(showAction.editShowUser(editShow))
   }
   return (
-    <div>
+    <div className="containerFormShow">
       <div className="formEdit">
         <h4 className="subtituloSignUpEdit">
           <span className="colorNaranjaDeLinea">|</span>Edit
