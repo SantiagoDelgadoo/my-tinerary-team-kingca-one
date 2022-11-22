@@ -18,7 +18,10 @@ import NewCity from './pages/NewCity';
 import DetailsHotel from './pages/DetailsHotel';
 import DetailsCities from './pages/DetailsCities';
 import NewHotel from './pages/NewHotel';
+
 import MyShows from './pages/MyShows';
+
+import MyIneraries from './pages/MyIneraries';
 
 function App() {
   return (
@@ -37,7 +40,11 @@ function App() {
     <Route path="/details/:id" element={<DetailsCities/>}></Route>
     <Route path="/detailsHotel/:id" element={<DetailsHotel/>}></Route>
     <Route path="/newhotel" element={<NewHotel/>}></Route>
+
     <Route path="/myshows" element={<MyShows/>}></Route>
+
+    <Route path="/myitineraries" element={<MyIneraries/>}></Route>
+
     </Routes>
     </Main>
   );

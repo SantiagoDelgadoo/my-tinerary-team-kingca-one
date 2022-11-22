@@ -196,6 +196,12 @@ form {
   cursor: pointer;
 }
 
+.formItinerary {
+  width: 450px;
+  height: 450px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 label {
   width: 85%;
   margin: 1rem;
@@ -210,9 +216,41 @@ label {
   width: 50%;
   flex-grow: 1;
 }
+.containerFormItineraries form {
+margin-bottom: 5rem;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+border-radius: 1rem;
+}
+.containerFormItineraries form label {
+  margin: 0;
+}
+
+.containerFormItineraries {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  
 
 .botonSubmit {
   border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: #ea5318;
+  width: 300px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.botonDeDelete {
+  border-radius: 0px 0px 30px 30px;
   border: none;
   color: white;
   background-color: #ea5318;
@@ -258,6 +296,36 @@ label {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.inputSignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inputItinery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 300px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 3px solid #ea5318;
+}
+
+.containerDosLabel {
+  display: flex;
+}
+
+
 
 /* --------------------------------------------------ARRANCA CITIES------------------------------------------------- */
 fieldset {
@@ -308,6 +376,18 @@ fieldset {
 
 .ContainerHeaderCities {
   background-image: url(../public/img/img-header-mano.jpg);
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.ContainerHeaderItineraries {
+  background-image: url(../public/img/img-itinerario.webp);
   color: white;
   min-height: 100vh;
   width: 100%;
@@ -493,6 +573,12 @@ fieldset {
   object-position: center;
 }
 
+.myshowsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .fatherPhoto {
   width: 50%;
   height: 100%;
@@ -521,6 +607,49 @@ fieldset {
 
 .descriptionCities {
   font-size: 20px;
+}
+
+.divDelForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myshowsContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 7rem;
+  gap: 3rem;
+  align-items: center;
+}
+.cardMyshowEditContainer{
+  display: flex;
+
+}
+.labelEdit{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.formEdit{
+  display: flex;
+  flex-direction: column;
+}
+.subtituloSignUpEdit{
+  width: 100%;
+  padding-left: 2rem;
+  font-size: x-large;
+}
+.labelEdit>input{
+ width: 50%;
+}
+.containerCardDetailsEventsEdit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* --------------------------------------------------------HOTELES DE CITIES-------------------------------------------------------------------- */
@@ -1112,6 +1241,8 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 1rem;
 }
 .cardTextEvents > h2 {
