@@ -38,7 +38,6 @@ export default function SignIn() {
                   <button className="botonSignIn">Sign Up</button>
                   </NavLink>
               </div>
-        </>
-         
+        </>    
   )
 }
