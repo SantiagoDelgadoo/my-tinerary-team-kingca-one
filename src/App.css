@@ -1248,6 +1248,7 @@ fieldset {
 .cardTextEvents > h2 {
   padding: 0.5rem;
   font-size: xx-large;
+  text-align: center;
 }
 .cardTextEvents > div > p > span {
   font-weight: bold;
@@ -1292,4 +1293,57 @@ fieldset {
   .cardText > p > span {
     font-weight: bold;
   }
+}
+
+.myshowsContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 3rem;
+  align-items: center;
+}
+.cardMyshowEditContainer{
+  display: flex;
+
+}
+.labelEdit{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.formEdit{
+  display: flex;
+  flex-direction: column;
+}
+.subtituloSignUpEdit{
+  width: 100%;
+  padding-left: 2rem;
+  font-size: x-large;
+}
+.labelEdit>input{
+ width: 50%;
+}
+.containerCardDetailsEventsEdit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.botonDeDelete {
+  border-radius: 0px 0px 30px 30px;
+  border: none;
+  color: white;
+  background-color: #ea5318;
+  width: 300px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1rem;
+  cursor: pointer;
+}
+.myshowsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
