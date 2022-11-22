@@ -26,7 +26,7 @@ export default function FormEditShow() {
     dispatch(hotelsAction.editHotelAdmin(editHotel));
   };
   return (
-    <div className="containerFormItineraries">
+    <div className="containerFormShow">
       <div className="formEdit">
         <h4 className="subtituloSignUpEdit">
           <span className="colorNaranjaDeLinea">|</span>Edit
