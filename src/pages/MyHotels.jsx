@@ -1,12 +1,12 @@
 import React from "react";
-import CardMyShow from "../components/CardMyShow";
-import FormEditShow from "../components/FormEditShow";
+import CardMyHotel from "../components/CardMyHotel";
+import FormEditHotel from "../components/FormEditHotel";
 export default function MyShows() {
   return (
     <>
       <div className="containerCardDetailsEventsEdit">
-        <CardMyShow />
-        <FormEditShow />
+        <CardMyHotel />
+        <FormEditHotel />
       </div>
     </>
   );

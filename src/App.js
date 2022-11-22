@@ -21,6 +21,7 @@ import NewHotel from './pages/NewHotel';
 import MyCities from './pages/MyCities';
 import MyShows from './pages/MyShows';
 import MyIneraries from './pages/MyIneraries';
+import MyHotels from './pages/MyHotels';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
     <Route path="/newhotel" element={<NewHotel/>}></Route>
     <Route path="/myshows" element={<MyShows/>}></Route>
     <Route path="/mycities" element={<MyCities/>}></Route>
+    <Route path="/myhotels" element={<MyHotels/>}></Route>
     <Route path="/myitineraries" element={<MyIneraries/>}></Route>
 
     </Routes>
