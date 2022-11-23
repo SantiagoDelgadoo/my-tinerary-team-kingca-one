@@ -11,7 +11,7 @@ export default function FormEditCities() {
     const dispatch = useDispatch()
     const {} = citiesAction
     const sendForm = (event) =>{
-        event.preventDefault()
+        event.preventDefault() //para q no se actualice la pag el preventdefault
         const objeto = {
             id:id.current.value,
             info: {name:name.current.value, population:population.current.value, photo:photo.current.value}

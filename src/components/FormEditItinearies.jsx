@@ -13,7 +13,7 @@ export default function FormEditItinearies() {
     const dispatch = useDispatch()
     const {editItineraries}=itinerariesAction
     const sendForm = (event) =>{
-        event.preventDefault()
+        event.preventDefault() //para q no se actualice la pag el preventdefault
         const objeto = {
             id:id.current.value,
             info: {name:name.current.value, description:description.current.value, photo:photo.current.value,price:price.current.value,duration:duration.current.value}

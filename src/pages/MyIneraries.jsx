@@ -6,7 +6,7 @@ import itinerariesAction from '../redux/actions/itinerariesAction'
 import Swal from "sweetalert2";
 
 export default function MyIneraries() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() //dispatch sirve para despachar acciones, adentro de los () se pasa la accion q cree de redux y si le quiero pasar algo mas a esa accion se pasa como data
   const itineraries = useSelector((store)=>store.itineraryReducer.itinerariesUser)
   const {getItineraries, deleteItineraries} = itinerariesAction
   useEffect (()=>{
