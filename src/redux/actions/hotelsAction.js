@@ -30,7 +30,7 @@ const deleteHotelAdmin = createAsyncThunk("deleteHotelAdmin", async (data) => {
 
 const editHotelAdmin = createAsyncThunk("editHotelAdmin", async (data) => {
   const { id, info } = data;
-  const res = await axios.patch(`${base_url}/hotel/${id}`, info, { new: true });
+  const res = await axios.patch(`${base_url}/hotel/${id}`, info);
   return {
     editHotelAdmin: res.data.id,
   };

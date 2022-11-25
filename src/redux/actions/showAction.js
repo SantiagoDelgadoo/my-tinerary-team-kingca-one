@@ -25,7 +25,7 @@ const deleteShowUser = createAsyncThunk("deleteShowUser", async (data) => {
   const editShowUser = createAsyncThunk("editShowUser", async (data) => {
     const {id,info} = data;
     const res = await axios.patch(
-      `${base_url}/show/${id}`,info,{new:true}
+      `${base_url}/show/${id}`,info
     );
     return {
       editShowUser: res.data.id,

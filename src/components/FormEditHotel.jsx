@@ -10,6 +10,7 @@ export default function FormEditShow() {
   const photo = useRef();
   const description = useRef();
   const capacity = useRef();
+  const form = useRef();
   const {} = hotelsAction;
 
   let edit = (show) => {
@@ -24,14 +25,15 @@ export default function FormEditShow() {
       },
     };
     dispatch(hotelsAction.editHotelAdmin(editHotel));
+    form.current.reset();
   };
   return (
     <div className="containerFormShow">
       <div className="formEdit">
         <h4 className="subtituloSignUpEdit">
-          <span className="colorNaranjaDeLinea">|</span>Edit
+          <span className="colorNaranjaDeLinea">|</span>Edit your Hotels
         </h4>
-        <form>
+        <form ref={form}>
           <label className="labelEdit">
             ID
             <input
