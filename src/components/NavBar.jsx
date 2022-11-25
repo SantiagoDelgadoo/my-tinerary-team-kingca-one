@@ -21,41 +21,63 @@ export default function NavBar() {
 
         {seeMenu ? (
           <div className="containerBurger">
-            <img src="./img/hambur.png" className="menuBurguer" onClick={changeMenu} alt="Menu Desplegable"/>
+            <img
+              src="./img/hambur.png"
+              className="menuBurguer"
+              onClick={changeMenu}
+              alt="Menu Desplegable"
+            />
           </div>
         ) : (
           <div className="containerBurger">
-            <img src="./img/hambur.png" className="menuBurguer" onClick={changeMenu} alt="Menu Desplegable"/>
-          <NavLink style={{textDecoration: 'none'}} to="/home">
-            <ul>Home</ul>
-          </NavLink>
-          <NavLink style={{textDecoration: 'none'}}to="/cities">
-            <ul>Cities</ul>
-          </NavLink>
-          <NavLink style={{textDecoration: 'none'}}to="/hotels">
-            <ul>Hotels</ul>
-          </NavLink>
+            <img
+              src="./img/hambur.png"
+              className="menuBurguer"
+              onClick={changeMenu}
+              alt="Menu Desplegable"
+            />
+            <NavLink style={{ textDecoration: "none" }} to="/home">
+              <ul>Home</ul>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/cities">
+              <ul>Cities</ul>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/hotels">
+              <ul>Hotels</ul>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/newhotel">
+              <ul>New Hotel</ul>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/newcity">
+              <ul>New City</ul>
+            </NavLink>
           </div>
         )}
         <nav>
-          <NavLink style={{textDecoration: 'none'}} to="/home">
+          <NavLink style={{ textDecoration: "none" }} to="/home">
             <ul>Home</ul>
           </NavLink>
-          <NavLink style={{textDecoration: 'none'}}to="/cities">
+          <NavLink style={{ textDecoration: "none" }} to="/cities">
             <ul>Cities</ul>
           </NavLink>
-          <NavLink style={{textDecoration: 'none'}}to="/hotels">
+          <NavLink style={{ textDecoration: "none" }} to="/hotels">
             <ul>Hotels</ul>
+          </NavLink>
+          <NavLink style={{ textDecoration: "none" }} to="/newcity">
+            <ul>New City</ul>
+          </NavLink>
+          <NavLink style={{ textDecoration: "none" }} to="/newhotel">
+            <ul>New Hotel</ul>
           </NavLink>
         </nav>
         {seeLogin ? (
           <div className="usuario">
             <img src="./img/usuario.png" onClick={change} alt="Usuario" />
-            <NavLink style={{textDecoration: 'none'}}to="/signin">
-            <button className="buttonHeader">SignIn</button>
+            <NavLink style={{ textDecoration: "none" }} to="/signin">
+              <button className="buttonHeader">SignIn</button>
             </NavLink>
-            <NavLink style={{textDecoration: 'none'}}to="/signup">
-            <button className="buttonHeader">SignUp</button>
+            <NavLink style={{ textDecoration: "none" }} to="/signup">
+              <button className="buttonHeader">SignUp</button>
             </NavLink>
           </div>
         ) : (

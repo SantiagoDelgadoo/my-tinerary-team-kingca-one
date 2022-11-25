@@ -402,7 +402,10 @@ fieldset {
   color: white;
   border: none;
 }
-
+.buttonDetailsCities>a{
+  color: white;
+  text-decoration: none;
+}
 .buttonDetailsCities:hover {
   background-color: #467be7;
 }
@@ -518,6 +521,7 @@ fieldset {
   flex-direction: column;
   text-align: center;
   color: white;
+  padding: 4px;
 }
 
 .titleCities {
@@ -527,7 +531,6 @@ fieldset {
 
 .descriptionCities {
   font-size: 20px;
-  margin-top: 3rem;
 }
 
 /* --------------------------------------------------------HOTELES DE CITIES-------------------------------------------------------------------- */
@@ -535,8 +538,11 @@ fieldset {
 .fatherHotel {
   min-height: 85vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
+  margin: 1rem;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */

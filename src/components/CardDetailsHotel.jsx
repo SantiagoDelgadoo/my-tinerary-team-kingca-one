@@ -1,23 +1,32 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import places from "../data/places";
+import { useState, useEffect } from "react";
+import { base_url } from "../api/url";
+import axios from "axios";
 
 export default function CardDetailsHotel() {
   let { id } = useParams();
+  let [hotel, setHotels] = useState([]);
   console.log(id);
-  let hotel = places.find((place) => place.id === id);
+  useEffect(() => {
+    axios
+      .get(`${base_url}/hotel/${id}`)
+      .then((response) => setHotels(response.data.id));
+  }, []);
 
-  console.log(hotel);
   return (
     <div className="cardDetailsHotel">
       <div className="cardPhoto">
-        <img src={hotel.photo[0]} alt="" />
+        <img src={hotel.photo} alt="" />
       </div>
 
       <div className="cardText">
         <h2>{hotel.name}</h2>
         <p>{hotel.description}</p>
-        <p><span>Capacity: </span>{hotel.capacity}</p>
+        <p>
+          <span>Capacity: </span>
+          {hotel.capacity}
+        </p>
       </div>
     </div>
   );

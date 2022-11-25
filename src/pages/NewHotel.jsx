@@ -1,5 +1,12 @@
 import React from 'react'
 import { useRef } from 'react'
+import axios from 'axios'
+let postHotel = async function (hotel){
+    axios
+    .post ('http://localhost:8000/api/hotel/',hotel)
+    .then ((Response)=>console.log(Response))
+    .catch((Error)=>console.log(Error))
+}
 export default function NewHotel() {
     let NewPlaceForm = useRef()
     let submit = (place) => {
@@ -8,9 +15,11 @@ export default function NewHotel() {
             name:place.target[0].value,
             description:place.target[1].value,
             photo:place.target[2].value,
-            capacity:place.target[3].value
+            capacity:place.target[3].value,
+            userId:"636d39111834aa8ba98269f2",
+            cityId:"636d5c20033f2a5f173b112e"
         }
-        localStorage.setItem("ArrayOfPlaces",JSON.stringify(NewPlace))
+        postHotel(NewPlace)
         NewPlaceForm.current.reset ()
         console.log(NewPlace);
     }
@@ -28,7 +37,7 @@ export default function NewHotel() {
         </label>
 
         <label> Photo
-            <input type="file"  placeholder="Enter photo"/>
+            <input type="text"  placeholder="Enter photo"/>
         </label>
 
         <label> Capacity

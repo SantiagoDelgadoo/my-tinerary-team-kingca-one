@@ -9,7 +9,7 @@ export default function CardCity(props) {
             <h3 className='subtituloCitiesCard'>{cities.name}</h3>
         </div>
             <div >
-                <NavLink to={`/details/${cities.id}`}><button className="buttonDetailsCities">More Details</button></NavLink>
+                <NavLink to={`/details/${cities._id}`}><button className="buttonDetailsCities">More Details</button></NavLink>
             </div>
         
     </div>
