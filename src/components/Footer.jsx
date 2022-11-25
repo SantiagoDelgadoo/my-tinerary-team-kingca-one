@@ -8,8 +8,8 @@ export default function Footer() {
     <footer>
     <div className='Footer'>
       <div className='FooterGit'>
-        <a  href='https://github.com/HernanC95' target='blank'><span>Cavalieri Hernan</span></a>
-        <a  href='https://github.com/SantiagoDelgadoo' target='blank'><span>Santiago Delgado</span></a>
+        <a  href='https://github.com/HernanC95' className='parrafosFooter'target='blank'><span>Cavalieri Hernan</span></a>
+        <a  href='https://github.com/SantiagoDelgadoo' className='parrafosFooter' target='blank'><span>Santiago Delgado</span></a>
       </div>
 
         <nav className='Footer-nav'>

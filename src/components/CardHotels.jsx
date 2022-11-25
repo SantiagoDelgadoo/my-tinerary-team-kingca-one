@@ -2,35 +2,32 @@ import React from "react";
 import { useState, useEffect } from "react";
 import SearchBar from "./FormText";
 import { Link as NavLink } from "react-router-dom";
-import { base_url } from "../api/url";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import hotelsAction from "../redux/actions/hotelsAction";
 
 export default function CardHotels() {
-  let [hotels, setHotels] = useState([]);
-  let [filterText, SetFilterText] = useState("");
-  let [selectValue, setSelectValue] = useState("");
-  let inputSearch = (text) => {
-    SetFilterText(text.target.value);
+  let [data, setData] = useState({ name: "", order: "" });
+  const listFiltered = useSelector((store) => store.hotelsReducer.listFiltered);
+  const dispatch = useDispatch();
+  let inputSearch = (event) => {
+    setData({ ...data, name: event.target.value });
   };
 
+  let inputOrder = (event) => {
+    setData({ ...data, order: event.target.value });
+  };
   useEffect(() => {
-    axios
-      .get(`${base_url}/hotel/?name=${filterText}&order=${selectValue}`)
-      .then((response) => setHotels(response.data.response));
-  }, [filterText, selectValue]);
-
+    dispatch(hotelsAction.filterHotels(data));
+  }, [data]);
   return (
     <>
       <div className="filters">
         <div>
-          <SearchBar value={filterText} onChange={inputSearch} />
+          <SearchBar onChange={inputSearch} />
         </div>
         <div>
           <form action="" className="filter-select">
-            <select
-              value={selectValue}
-              onChange={(event) => setSelectValue(event.target.value)}
-            >
+            <select onChange={inputOrder}>
               <option value="">Choose an option</option>
               <option value="ASC">Ascending order</option>
               <option value="DESC">Descending order</option>
@@ -39,7 +36,7 @@ export default function CardHotels() {
         </div>
       </div>
 
-      {hotels.map((place) => {
+      {listFiltered.map((place) => {
         return (
           <div className="containerCards" key={place._id}>
             <div className="cardImg">
