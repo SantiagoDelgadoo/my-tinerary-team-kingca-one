@@ -68,8 +68,8 @@ export default function NewCity() {
         <form
           ref={NewCityForm}
           onSubmit={submit}
-          className="containerFormCities"
-        >
+          className="containerFormCities">
+            
           <label className="labelNewCity">
             {" "}
             Name of city
