@@ -308,6 +308,7 @@ border-radius: 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  border: 3px solid #ea5318;
 }
 
 .inputItinery {
@@ -373,6 +374,7 @@ fieldset {
 .subtituloCities {
   color: #ea5318;
   font-size: 35px;
+  margin-top: 2rem;
 }
 
 .ContainerHeaderCities {
@@ -592,6 +594,7 @@ fieldset {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: auto;
 }
 
 .fatherPhoto {
@@ -1365,16 +1368,17 @@ fieldset {
 .myshowsContainer {
   display: flex;
   justify-content: center;
+  align-items:center;
   flex-wrap: wrap;
 }
 .cardDetailsEdit{
   width: 20rem;
   height: 30rem;
+  margin: 1rem;
 }
 .cardMyshowEditContainer{
   display: flex;
   width: 20rem;
-  height: 30rem;
 }
 .cardPhotoEdit>img{
   width: 20rem;
@@ -1383,7 +1387,8 @@ fieldset {
 }
 .cardTextEdits{
   width: 100%;
-  height: 15rem;
+  height: auto;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1398,19 +1403,30 @@ fieldset {
 }
 .cardTextEdits>p{
   padding-left: 1rem;
-  align-self: flex-start;
+  align-self: center;
 }
 .cardTextEdits>button{
   justify-self: flex-end;
   margin: 0;
   width: 100%;
 }
+.cardDescrDate{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .containerFormShow form {
-  width: 30rem;
+  width: 40rem;
+  height: 70vh;
   margin-bottom: 5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 2rem;
   border-radius: 1rem;
+  }
+  .containerFormShow h4{
+    padding: 2rem;
+    font-size: 2rem;
   }
   .containerFormShow form label {
     margin: 0;
@@ -1437,6 +1453,5 @@ fieldset {
     .labelEdit>input{
       justify-self: flex-end;
       width: 70%;
-      border: #bebebe solid 3px;
     }
  
