@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import itinerariesAction from "../redux/actions/itinerariesAction";
 
 export default function FormEditItinearies() {
+
   const id = useRef();
   const name = useRef();
   const description = useRef();
@@ -26,6 +27,7 @@ export default function FormEditItinearies() {
     };
     dispatch(editItineraries(objeto));
   };
+
 
   return (
     <div className="containerFormShow">

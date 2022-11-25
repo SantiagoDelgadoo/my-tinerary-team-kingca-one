@@ -6,6 +6,7 @@ import itinerariesAction from "../redux/actions/itinerariesAction";
 import Swal from "sweetalert2";
 
 export default function MyIneraries() {
+
   const dispatch = useDispatch();
   const itineraries = useSelector(
     (store) => store.itineraryReducer.itinerariesUser
@@ -14,6 +15,7 @@ export default function MyIneraries() {
   useEffect(() => {
     dispatch(getItineraries());
   }, []);
+
   console.log(itineraries);
   const Delete = async () => {
     dispatch(deleteItineraries());
