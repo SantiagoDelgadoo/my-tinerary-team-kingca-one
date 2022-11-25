@@ -51,15 +51,17 @@ export default function CardDetailsEvents() {
                 </div>
                 <div className="cardTextEdits">
                   <h2>{event.name}</h2>
-                    <p>
-                      <span>Capacity: </span>
-                      {event.capacity}
-                    </p>
-                    <p>
-                      <span>Description: </span>
-                      {/* event.description */
-                      /* .slice(0, 10) */}
-                    </p>
+                  <p>
+                    <span>Capacity: </span>
+                    {event.capacity}
+                  </p>
+                  <p>
+                    <span>Description: </span>
+                    {
+                      event.description
+                      /* .slice(0, 10) */
+                    }
+                  </p>
                   <p>
                     <span>ID: </span>
                     {event._id}

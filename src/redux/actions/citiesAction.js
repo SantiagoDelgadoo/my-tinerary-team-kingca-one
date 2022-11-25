@@ -56,7 +56,9 @@ const deleteMyCities = createAsyncThunk ('deleteMyCities',async (data)=>{ //uso 
 const editCity = createAsyncThunk ('editCity',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
     const {id, info} = data;
     try {
-        const res = await axios.put(`${base_url}/city/${id}`,info, {new: true} //me guardo la rta de axios que seria el objeto editado
+
+        const res = await axios.put(`${base_url}/city/${id}`,info
+
         );
         console.log(res.data);
         return {

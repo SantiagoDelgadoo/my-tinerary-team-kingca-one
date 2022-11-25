@@ -4,42 +4,44 @@ import { useDispatch } from "react-redux";
 import showAction from "../redux/actions/showAction";
 
 export default function FormEditShow() {
-  const dispatch=useDispatch()
-  const id =useRef()
-  const name =useRef()
-  const photo =useRef()
-  const description =useRef()
-  const price =useRef()
-  const date =useRef()
-  const {}= showAction;
+  const dispatch = useDispatch();
+  const id = useRef();
+  const name = useRef();
+  const photo = useRef();
+  const description = useRef();
+  const price = useRef();
+  const date = useRef();
+  const form = useRef();
+  const {} = showAction;
 
   let edit = (show) => {
-    show.preventDefault ()
+    show.preventDefault();
     let editShow = {
-        id:id.current.value,
-        info:{ 
-          name:name.current.value,
-          description:description.current.value,
-          photo:photo.current.value,
-          price:price.current.value,
-/*           userId:"636e68db00607058e7cf0bac",
-          hotelId:"636d5ff16abdddfa7405ab46" */}
-    }
-    dispatch(showAction.editShowUser(editShow))
-  }
+      id: id.current.value,
+      info: {
+        name: name.current.value,
+        description: description.current.value,
+        date: date.current.value,
+        photo: photo.current.value,
+        price: price.current.value,
+      },
+    };
+    dispatch(showAction.editShowUser(editShow));
+    form.current.reset();
+  };
   return (
     <div className="containerFormShow">
       <div className="formEdit">
         <h4 className="subtituloSignUpEdit">
-          <span className="colorNaranjaDeLinea">|</span>Edit
+          <span className="colorNaranjaDeLinea">|</span>Edit your Shows
         </h4>
-        <form /* ref={form} onSubmit= {newUser} */>
-        <label className="labelEdit">
+        <form ref={form}>
+          <label className="labelEdit">
             ID
             <input
-            ref={id}
+              ref={id}
               className="inputSignUp"
-                 type="text"
+              type="text"
               placeholder="Enter ID"
             />
           </label>
@@ -47,7 +49,7 @@ export default function FormEditShow() {
           <label className="labelEdit">
             Name
             <input
-             ref={name}
+              ref={name}
               className="inputSignUp"
               type="text"
               placeholder="Enter name"
@@ -57,9 +59,9 @@ export default function FormEditShow() {
           <label className="labelEdit">
             Date
             <input
-             ref={date}
+              ref={date}
               className="inputSignUp"
-              type="text"
+              type="date"
               placeholder="Enter date"
             />
           </label>
@@ -67,16 +69,16 @@ export default function FormEditShow() {
           <label className="labelEdit">
             Description
             <input
-             ref={description}
+              ref={description}
               className="inputSignUp"
-                type="text"
+              type="text"
               placeholder="Enter Description"
             />
           </label>
           <label className="labelEdit">
             Price
             <input
-             ref={price}
+              ref={price}
               className="inputSignUp"
               type="number"
               placeholder="Enter Price"
@@ -86,13 +88,15 @@ export default function FormEditShow() {
           <label className="labelEdit">
             Photo
             <input
-             ref={photo}
+              ref={photo}
               className="inputSignUp"
               type="text"
               placeholder="Enter url photo"
             />
           </label>
-          <button onClick={edit}  className="botonSubmit">Edit</button>
+          <button onClick={edit} className="botonSubmit">
+            Edit
+          </button>
         </form>
       </div>
     </div>
