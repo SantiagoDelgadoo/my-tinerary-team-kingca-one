@@ -20,10 +20,9 @@ export default function FormEditShow() {
         info:{ 
           name:name.current.value,
           description:description.current.value,
+          date:date.current.value,
           photo:photo.current.value,
-          price:price.current.value,
-/*           userId:"636e68db00607058e7cf0bac",
-          hotelId:"636d5ff16abdddfa7405ab46" */}
+          price:price.current.value,}
     }
     dispatch(showAction.editShowUser(editShow))
   }
@@ -59,7 +58,7 @@ export default function FormEditShow() {
             <input
              ref={date}
               className="inputSignUp"
-              type="text"
+              type="date"
               placeholder="Enter date"
             />
           </label>

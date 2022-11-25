@@ -56,7 +56,7 @@ const deleteMyCities = createAsyncThunk ('deleteMyCities',async (data)=>{
 const editCity = createAsyncThunk ('editCity',async (data)=>{
     const {id, info} = data;
     try {
-        const res = await axios.put(`${base_url}/city/${id}`,info, {new: true}
+        const res = await axios.put(`${base_url}/city/${id}`,info
         );
         console.log(res.data);
         return {
