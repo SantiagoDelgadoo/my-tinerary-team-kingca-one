@@ -12,15 +12,15 @@ export default function Cities() {
   let [cities, setCities] = useState([]);
   let [inputSearch, setInputSearch] = useState("");
   let [checks, setChecks] = useState([]);
-  let [data, setData] = useState({name:"",continent:""});
+  let [data, setData] = useState({name:"",continent:""}); 
 
-  const citiesFiltered = useSelector((store) => store.citiesReducer.listCities);
+  const citiesFiltered = useSelector((store) => store.citiesReducer.listCities); //useselector me suscribe a un estado del redux, cada vez el array se actualiza por el reductor automaticamete se actualiza la const
   useEffect (()=>{
-    dispatch(citiesAction.allCities());
+    dispatch(citiesAction.allCities()); //dispatch sirve para despachar acciones, adentro de los () se pasa la accion q cree de redux y si le quiero pasar algo mas a esa accion se pasa como data
   },[])
-  const continents = useSelector((store) => store.citiesReducer.listContinents);
+  const continents = useSelector((store) => store.citiesReducer.listContinents); //useselector me suscribe a un estado del redux, cada vez el array se actualiza por el reductor automaticamete se actualiza la const
   console.log(continents);
-  const listOfContinents = [...new Set (continents.map(city=>city.continent))] 
+  const listOfContinents = [...new Set (continents.map(city=>city.continent))] //continents es un array con todas las ciudades, new set para q no repita
   let search = (event) => {
     setInputSearch(event.target.value);
     setData({...data,name:event.target.value})
@@ -42,17 +42,10 @@ export default function Cities() {
     continent:continent
     })
 
-    /* console.log(data); */
   }, [checks]);
-  console.log(data);
-  /* useEffect(()=>{
-        axios.get(`http://localhost:8000/api/city/?name=${inputSearch}${peticionContinent()}`)
-        .then((response)=>setCitiesFiltered(response.data.cities))
-    },[inputSearch,checks]) 
-    console.log(inputSearch); */
 
   useEffect(() => {
-    dispatch(citiesAction.getCities(data));
+    dispatch(citiesAction.getCities(data)); //dispatch sirve para despachar acciones, adentro de los () se pasa la accion q cree de redux y si le quiero pasar algo mas a esa accion se pasa como data
   }, [data]);
   return (
     <>

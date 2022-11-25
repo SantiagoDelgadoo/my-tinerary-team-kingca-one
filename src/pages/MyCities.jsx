@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 
 export default function MyCities() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() //dispatch sirve para despachar acciones, adentro de los () se pasa la accion q cree de redux y si le quiero pasar algo mas a esa accion se pasa como data
   const cities = useSelector((store)=>store.citiesReducer.listCities)
   console.log(cities);
   const {getMyCities, deleteMyCities} = citiesAction
