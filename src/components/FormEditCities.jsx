@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import citiesAction from "../redux/actions/citiesAction";
 
 export default function FormEditCities() {
+
   const id = useRef();
   const name = useRef();
   const photo = useRef();

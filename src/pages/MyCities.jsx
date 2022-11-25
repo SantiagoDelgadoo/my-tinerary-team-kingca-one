@@ -6,6 +6,7 @@ import citiesAction from "../redux/actions/citiesAction";
 import Swal from "sweetalert2";
 
 export default function MyCities() {
+
   const dispatch = useDispatch();
   const cities = useSelector((store) => store.citiesReducer.listCities);
   console.log(cities);
