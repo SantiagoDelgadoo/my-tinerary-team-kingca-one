@@ -4,7 +4,7 @@ import '../App.css'
 
 export default function SignIn() {
   return (
-    <div className="FirstContainer">
+    <div className="ContainerDeSingUp">
       <div className="containerSingup">
         <FormSignIn />
       </div>
