@@ -29,8 +29,9 @@ const allCities = createAsyncThunk ('allCities',async ()=>{  //uso assynkthunk p
     }
 
 })
-const getMyCities = createAsyncThunk ('getMyCities',async ()=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
-    const user = "636d39111834aa8ba98269f2"
+const getMyCities = createAsyncThunk  ('getMyCities',async (userId)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
+    console.log(userId);
+    const user = userId
     try {
         const res = await axios.get (`${base_url}/city/?userId=${user}`) //me guardo rta de axios con get
         return {

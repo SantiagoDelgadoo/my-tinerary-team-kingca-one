@@ -6,13 +6,14 @@ import citiesAction from "../redux/actions/citiesAction";
 import Swal from "sweetalert2";
 
 export default function MyCities() {
+  let { id } = useSelector((store) => store.userReducer);
+  console.log(id);
 
   const dispatch = useDispatch();
   const cities = useSelector((store) => store.citiesReducer.listCities);
-  console.log(cities);
   const { getMyCities, deleteMyCities } = citiesAction;
   useEffect(() => {
-    dispatch(getMyCities());
+    dispatch(getMyCities(id));
   }, []);
   console.log(cities);
   const Delete = async () => {
