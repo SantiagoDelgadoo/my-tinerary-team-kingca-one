@@ -72,13 +72,30 @@ export default function NavBar() {
         </nav>
         {seeLogin ? (
           <div className="usuario">
-            <img src="./img/usuario.png" onClick={change} alt="Usuario" />
-            <NavLink style={{ textDecoration: "none" }} to="/signin">
-              <button className="buttonHeader">SignIn</button>
-            </NavLink>
-            <NavLink style={{ textDecoration: "none" }} to="/signup">
-              <button className="buttonHeader">SignUp</button>
-            </NavLink>
+            <div className="usuarioybotones">
+              <img src="./img/usuario.png" onClick={change} alt="Usuario" />
+              <NavLink style={{ textDecoration: "none" }} to="/signin">
+                <button className="buttonHeader">SignIn</button>
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/signup">
+                <button className="buttonHeader">SignUp</button>
+              </NavLink>
+            </div>
+
+            <div className="containerNavBarUser">
+              <NavLink style={{ textDecoration: "none" }} to="/mycities">
+                <ul>My cities</ul>
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/myhotels">
+                <ul>My hotels</ul>
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/myshows">
+                <ul>My shows</ul>
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/myitineraries">
+                <ul>My Tineraries</ul>
+              </NavLink>
+            </div>
           </div>
         ) : (
           <div className="usuario">
