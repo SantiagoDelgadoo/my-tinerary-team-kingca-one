@@ -12,8 +12,8 @@ const filterHotels = createAsyncThunk("filterHotels", async (data) => {
     listFiltered: res.data.response,
   };
 });
-const getHotelAdmin = createAsyncThunk("getHotelAdmin", async () => {
-  const user = "636d39111834aa8ba98269f2";
+const getHotelAdmin = createAsyncThunk("getHotelAdmin", async (userId) => {
+  const user = userId;
   const res = await axios.get(`${base_url}/hotel/?userId=${user}`);
   return {
     hotelAdmin: res.data.response,

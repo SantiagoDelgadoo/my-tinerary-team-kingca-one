@@ -3,6 +3,7 @@ import userActions from "../actions/userActions";
 const { login, reIngress } = userActions;
 
 const initialState = {
+  id: "",
   name: "",
   photo: "",
   logged: false,
@@ -18,6 +19,7 @@ const userReducer = createReducer(initialState, (builder) => {
       localStorage.setItem("token", JSON.stringify({ token: { user: token } }));
       let newState = {
         ...state,
+        id: user.id,
         name: user.name,
         photo: user.photo,
         logged: true,
@@ -38,8 +40,10 @@ const userReducer = createReducer(initialState, (builder) => {
 
     if (action.payload.success) {
       let { user, token } = response;
+      console.log(user);
       let newState = {
         ...state,
+        id: user.user.id,
         name: user.user.name,
         photo: user.user.photo,
         logged: true,

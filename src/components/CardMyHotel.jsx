@@ -6,12 +6,13 @@ import Swal from "sweetalert2";
 
 export default function CardDetailsEvents() {
   const hotel = useSelector((store) => store.hotelReducer.hotelAdmin);
-  console.log(hotel);
   const dispatch = useDispatch();
-  const { getHotelAdmin } = hotelsAction;
+  let { id } = useSelector((store) => store.userReducer);
+  console.log(id);
+  const { getHotelAdmin} = hotelsAction;
   const { deleteHotelAdmin } = hotelsAction;
   useEffect(() => {
-    dispatch(getHotelAdmin());
+    dispatch(getHotelAdmin(id));
   }, []);
 
   return (
