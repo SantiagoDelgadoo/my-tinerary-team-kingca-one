@@ -47,19 +47,17 @@ function App() {
         <Route path="" element={<Welcome />}></Route>
         <Route path="/home" element={<Welcome />}></Route>
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/hotels" element={<Hotels />}></Route>
         <Route path="/cities" element={<Cities />}></Route>
         <Route path="/details/:id" element={<DetailsCities />}></Route>
         <Route path="/detailsHotel/:id" element={<DetailsHotel />}></Route>
         <Route element={<ProtectedRoute isAllowed={!logged} reDirect={"/"} />}>
-          <Route path="/myshows" element={<MyShows />}></Route>/////estos son
-          para vos santi un usuario registrado
-          <Route path="/myitineraries" element={<MyIneraries />}></Route>
-          /////estos son para vos santi un usuario registrado
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/signin" element={<SignIn />}></Route>
         </Route>
         <Route element={<ProtectedRoute isAllowed={!!logged} reDirect={"/"} />}>
+        <Route path="/myshows" element={<MyShows />}></Route>
+        <Route path="/myitineraries" element={<MyIneraries />}></Route>
           <Route
             path="/newcity"
             element={
