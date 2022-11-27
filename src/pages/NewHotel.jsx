@@ -63,7 +63,7 @@ export default function NewHotel() {
       photo: place.target[2].value,
       capacity: place.target[3].value,
       userId: id,
-      cityId: idCity,
+      cityId: idCity.current.value,
     };
     postHotel(NewPlace);
     NewPlaceForm.current.reset();
