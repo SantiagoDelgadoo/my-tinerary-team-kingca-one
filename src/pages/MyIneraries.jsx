@@ -4,8 +4,10 @@ import FormEditItinearies from "../components/FormEditItinearies";
 import { useDispatch, useSelector } from "react-redux";
 import itinerariesAction from "../redux/actions/itinerariesAction";
 import Swal from "sweetalert2";
+import FormCreateItineraries from "../components/FormCreateItineraries";
 
 export default function MyIneraries() {
+  let { id } = useSelector((store) => store.userReducer);
 
   const dispatch = useDispatch();
   const itineraries = useSelector(
@@ -13,7 +15,7 @@ export default function MyIneraries() {
   );
   const { getItineraries, deleteItineraries } = itinerariesAction;
   useEffect(() => {
-    dispatch(getItineraries());
+    dispatch(getItineraries(id));
   }, []);
 
   console.log(itineraries);
@@ -38,8 +40,10 @@ export default function MyIneraries() {
         <label className="containerSearchcities"></label>
       </div>
       <div className="divDelForm">
+        <div className="formulariosDeItineraries">
         <FormEditItinearies></FormEditItinearies>
-
+        <FormCreateItineraries></FormCreateItineraries>
+        </div>
         <h3 className="subtituloCities">
           <span className="colorNaranjaDeLinea">| </span>My Itinearies
         </h3>
@@ -69,6 +73,7 @@ export default function MyIneraries() {
                 }
               });
             };
+
             return (
               <div className="cardMyshowEditContainer">
                 <div className="cardDetailsEdit">

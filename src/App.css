@@ -9,6 +9,12 @@
   text-decoration: none;
 }
 
+.formulariosDeItineraries {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
 .ContainerDeSignUp {
   color: white;
   min-height: 100vh;

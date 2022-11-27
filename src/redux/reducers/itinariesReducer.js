@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import itinerariesAction from "../actions/itinerariesAction";
-const {getItineraries,deleteItineraries, editItineraries} = itinerariesAction 
+const {getItineraries,deleteItineraries, editItineraries, createItineraries} = itinerariesAction 
 const initialState = { //los reductores necesitan un estado inicial
     itinerariesUser: [] //estados iniciales de cada user
 }
@@ -12,6 +12,10 @@ const itineraryReducer = createReducer(initialState, (builder) => { //creo reduc
 
     builder.addCase(deleteItineraries.fulfilled,(state,action)=>{
         return {...state,itinerariesUser:state.itinerariesUser.filter(itinerary=>itinerary._id !== action.payload.itineriesdeleted)}
+    })
+
+    builder.addCase(createItineraries.fulfilled,(state,action)=>{
+        return {...state,itinerariesUser:state.itinerariesUser.concat(action.payload.itineriescreated)} //cuando retorno el nuevo estado filtro y dsp concateno
     })
 
     builder.addCase(editItineraries.fulfilled,(state,action)=>{
