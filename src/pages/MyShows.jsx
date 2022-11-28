@@ -7,8 +7,10 @@ export default function MyShows() {
     <>
       <div className="containerCardDetailsEventsEdit">
         <CardMyShow />
+        <div className="containerFormShowGrande">
         <FormEditShow />
         <FormCreateShow />
+        </div>
       </div>
     </>
   );

@@ -42,8 +42,9 @@ export default function FormCreateShow() {
           <span className="colorNaranjaDeLinea">|</span>Create Show
         </h4>
         <form ref={form}>
-          <label>Hotel</label>
-          <select ref={idHotel}>
+          <label>
+          <label className="selectCityShow">Hotel
+          <select ref={idHotel} >
             <option value="">Choose Hotel</option>
             {hotels.map((hotel) => (
               <option key={hotel.name} value={hotel._id}>
@@ -51,7 +52,8 @@ export default function FormCreateShow() {
               </option>
             ))}
           </select>
-          <label></label>
+          </label>
+          </label>
           <label className="labelEdit">
             Name
             <input
@@ -100,7 +102,7 @@ export default function FormCreateShow() {
               placeholder="Enter url photo"
             />
           </label>
-          <button onClick={create} className="botonSubmit">
+          <button onClick={create} className="botonSubmitEditHotel">
             Create
           </button>
         </form>

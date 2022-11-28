@@ -1705,3 +1705,20 @@ fieldset {
   padding: 0.5rem;
   width: 100%;
 }
+.containerFormShowGrande{
+  display: flex;
+  flex-wrap: wrap ;
+  gap: 2rem;
+}
+.selectCityShow{
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.selectCityShow select{
+  padding: 0.5rem;
+  width: 100%;
+}

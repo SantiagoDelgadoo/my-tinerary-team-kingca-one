@@ -23,15 +23,18 @@ const getHotelAdmin = createAsyncThunk("getHotelAdmin", async (userId) => {
 
 const deleteHotelAdmin = createAsyncThunk("deleteHotelAdmin", async (data) => {
   const id = data.id;
-  const res = await axios.delete(`${base_url}/hotel/${id}`);
+  const token= data.token;
+  let headers = { headers: { Authorization: `Bearer ${token}` } };
+  const res = await axios.delete(`${base_url}/hotel/${id}`,headers);
   return {
     deleteHotel: res.data.id,
   };
 });
 
 const editHotelAdmin = createAsyncThunk("editHotelAdmin", async (data) => {
-  const { id, info } = data;
-  const res = await axios.patch(`${base_url}/hotel/${id}`, info);
+  const { id, info,token } = data;
+  let headers = { headers: { Authorization: `Bearer ${token}` } };
+  const res = await axios.patch(`${base_url}/hotel/${id}`,info,headers);
   return {
     editHotelAdmin: res.data.id,
   };
