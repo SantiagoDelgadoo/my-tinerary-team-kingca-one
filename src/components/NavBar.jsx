@@ -132,9 +132,16 @@ export default function NavBar() {
               <NavLink style={{ textDecoration: "none" }} to="/myitineraries">
                 
                 <ul>My Tineraries</ul>
+
+              </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/myprofile">
+                <ul>My Profile</ul>
+              </NavLink>
+
               </NavLink> </>:null}
                 {logged ? <ul className="logoutPoint" onClick={Logout}>Logout</ul> :null} 
                 
+
 
             </div>
           </div>

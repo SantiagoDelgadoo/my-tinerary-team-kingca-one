@@ -1626,3 +1626,35 @@ fieldset {
   align-items: center;
   gap: 2rem;
 }
+.containerProfile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem;
+}
+.containerCardsProfile {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.containerCardsProfile img {
+  width: 100%;
+  object-fit: cover;
+}
+.containerFormUser {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}
