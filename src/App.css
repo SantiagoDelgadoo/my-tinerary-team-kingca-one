@@ -82,8 +82,7 @@ ul {
 }
 
 ul:hover {
-  border-bottom: 3px solid #ea5318;
-  padding-bottom: 1rem;
+  border-bottom: 1px solid #ea5318;
 }
 
 .logo img {
@@ -298,7 +297,19 @@ input {
   cursor: pointer;
   align-self: flex-start;
 }
-
+.botonSubmitEditHotel {
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: #ea5318;
+  width: 80%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1rem;
+  cursor: pointer;
+  align-self: center;
+}
 .botonDeDelete {
   border-radius: 0px 0px 30px 30px;
   border: none;
@@ -1657,4 +1668,40 @@ fieldset {
   align-items: center;
   justify-content: center;
   margin: 0px;
+}
+.containerNamePhoto{
+  display: flex;
+  gap: 2rem;
+}
+.containerNavUser{
+  display: flex;
+}
+.selectCity{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: start;
+}
+.selectCity select{
+  padding: 0.5rem;
+  width: 100%;
+}
+.filter-select{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-top: 1.1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: start;
+}
+.filter-select select{
+  padding: 0.5rem;
+  width: 100%;
 }

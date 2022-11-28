@@ -82,7 +82,7 @@ export default function FormEditShow() {
               placeholder="Enter url photo"
             />
           </label>
-          <button onClick={edit} className="botonSubmit">
+          <button onClick={edit} className="botonSubmitEditHotel">
             Edit
           </button>
         </form>
