@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 export default function CardDetailsEvents() {
   const hotel = useSelector((store) => store.hotelReducer.hotelAdmin);
   const dispatch = useDispatch();
-  let { id } = useSelector((store) => store.userReducer);
+  let { id,token } = useSelector((store) => store.userReducer);
   console.log(id);
   const { getHotelAdmin} = hotelsAction;
   const { deleteHotelAdmin } = hotelsAction;
@@ -40,7 +40,7 @@ export default function CardDetailsEvents() {
                   width: "25rem",
                   padding: "2rem",
                 });
-                dispatch(deleteHotelAdmin({ id: event._id }));
+                dispatch(deleteHotelAdmin({ id: event._id,token:token }));
               }
             });
           };

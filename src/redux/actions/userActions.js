@@ -36,6 +36,7 @@ const Logout= createAsyncThunk("Logout", async (data) => {
 const reIngress = createAsyncThunk("reIngress", async (token) => {
   let url = `${base_url}auth/token`;
   let headers = { headers: { Authorization: `Bearer ${token}` } };
+  console.log(headers);
   try {
     let user = await axios.post(url, null, headers);
     return {

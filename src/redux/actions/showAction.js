@@ -12,15 +12,18 @@ const getShowUser = createAsyncThunk("getShowUser", async (id) => {
 
 const deleteShowUser = createAsyncThunk("deleteShowUser", async (data) => {
   const id = data.id;
-  const res = await axios.delete(`${base_url}/show/${id}`);
+  const token= data.token;
+  let headers = { headers: { Authorization: `Bearer ${token}` } };
+  const res = await axios.delete(`${base_url}/show/${id}`,headers);
   return {
     deleteShow: res.data.id,
   };
 });
 
 const editShowUser = createAsyncThunk("editShowUser", async (data) => {
-  const { id, info } = data;
-  const res = await axios.patch(`${base_url}/show/${id}`, info);
+  const { id,info,token } = data;
+  let headers = { headers: { Authorization: `Bearer ${token}` } };
+  const res = await axios.patch(`${base_url}/show/${id}`, info, headers);
   return {
     editShowUser: res.data.id,
   };

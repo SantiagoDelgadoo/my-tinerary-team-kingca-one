@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import showAction from "../redux/actions/showAction";
 
 export default function FormEditShow() {
@@ -13,6 +13,7 @@ export default function FormEditShow() {
   const date = useRef();
   const form = useRef();
   const {} = showAction;
+  const {token } = useSelector((store) => store.userReducer);
 
   let edit = (show) => {
     show.preventDefault();
@@ -24,7 +25,8 @@ export default function FormEditShow() {
         date: date.current.value,
         photo: photo.current.value,
         price: price.current.value,
-      },
+      }
+      ,token:token,
     };
     dispatch(showAction.editShowUser(editShow));
     form.current.reset();
@@ -94,7 +96,7 @@ export default function FormEditShow() {
               placeholder="Enter url photo"
             />
           </label>
-          <button onClick={edit} className="botonSubmit">
+          <button onClick={edit} className="botonSubmitEditHotel">
             Edit
           </button>
         </form>
