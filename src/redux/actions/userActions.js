@@ -36,9 +36,27 @@ const reIngress = createAsyncThunk("reIngress", async (token) => {
     };
   }
 });
+const getUser = createAsyncThunk("getUser", async (userId) => {
+  const user = userId;
+  const res = await axios.get(`${base_url}/auth/${user}`);
+  return {
+    success: true,
+    response: res.data,
+  };
+});
+const editUser = createAsyncThunk("editUser", async (data) => {
+  const { id, info } = data;
+  const res = await axios.patch(`${base_url}auth/${id}`, info);
+  console.log(res.data);
+  return {
+    editUser: res.data.id,
+  };
+});
 const userActions = {
   login,
   reIngress,
+  getUser,
+  editUser,
 };
 
 export default userActions;

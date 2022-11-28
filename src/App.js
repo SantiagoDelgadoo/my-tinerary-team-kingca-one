@@ -19,6 +19,7 @@ import DetailsHotel from "./pages/DetailsHotel";
 import DetailsCities from "./pages/DetailsCities";
 import NewHotel from "./pages/NewHotel";
 import MyCities from "./pages/MyCities";
+import MyProfile from "./pages/MyProfile";
 import MyShows from "./pages/MyShows";
 import MyIneraries from "./pages/MyIneraries";
 import MyHotels from "./pages/MyHotels";
@@ -52,12 +53,14 @@ function App() {
         <Route path="/details/:id" element={<DetailsCities />}></Route>
         <Route path="/detailsHotel/:id" element={<DetailsHotel />}></Route>
         <Route element={<ProtectedRoute isAllowed={!logged} reDirect={"/"} />}>
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/signin" element={<SignIn />}></Route>
         </Route>
         <Route element={<ProtectedRoute isAllowed={!!logged} reDirect={"/"} />}>
-        <Route path="/myshows" element={<MyShows />}></Route>
-        <Route path="/myitineraries" element={<MyIneraries />}></Route>
+          <Route path="/myshows" element={<MyShows />}></Route>
+          <Route path="/myitineraries" element={<MyIneraries />}></Route>
+          <Route path="/myprofile" element={<MyProfile />}></Route>
+
           <Route
             path="/newcity"
             element={

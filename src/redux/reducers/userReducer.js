@@ -1,11 +1,14 @@
 import { createReducer } from "@reduxjs/toolkit";
 import userActions from "../actions/userActions";
-const { login, reIngress } = userActions;
+const { login, reIngress, getUser, editUser } = userActions;
 
 const initialState = {
   id: "",
   name: "",
+  LastName: "",
   photo: "",
+  age: "",
+  email: "",
   logged: false,
   role: "",
   token: "",
@@ -40,7 +43,6 @@ const userReducer = createReducer(initialState, (builder) => {
 
     if (action.payload.success) {
       let { user, token } = response;
-      console.log(user);
       let newState = {
         ...state,
         id: user.user.id,
@@ -50,7 +52,6 @@ const userReducer = createReducer(initialState, (builder) => {
         token: token,
         role: user.user.role,
       };
-      console.log(newState);
       return newState;
     } else {
       let newState = {
@@ -59,6 +60,49 @@ const userReducer = createReducer(initialState, (builder) => {
       };
       return newState;
     }
+  });
+  builder.addCase(getUser.fulfilled, (state, action) => {
+    const { response } = action.payload;
+    console.log(response);
+    if (response.success) {
+      let { data } = response;
+      console.log(data);
+      let newState = {
+        ...state,
+        id: data._id,
+        name: data.name,
+        email: data.email,
+        age: data.age,
+        lname: data.lastName,
+        photo: data.photo,
+        logged: true,
+        role: data.role,
+      };
+      return newState;
+    } else {
+      let newState = {
+        ...state,
+        message: response,
+      };
+      return newState;
+    }
+  });
+  builder.addCase(editUser.fulfilled, (state, action) => {
+    const { editUser } = action.payload;
+    let data = editUser;
+    console.log(data);
+    let newState = {
+      ...state,
+      id: data._id,
+      name: data.name,
+      email: data.email,
+      age: data.age,
+      lname: data.lastName,
+      photo: data.photo,
+      logged: true,
+      role: data.role,
+    };
+    return newState;
   });
 });
 

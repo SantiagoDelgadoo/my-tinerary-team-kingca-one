@@ -95,6 +95,9 @@ export default function NavBar() {
               <NavLink style={{ textDecoration: "none" }} to="/myitineraries">
                 <ul>My Tineraries</ul>
               </NavLink>
+              <NavLink style={{ textDecoration: "none" }} to="/myprofile">
+                <ul>My Profile</ul>
+              </NavLink>
             </div>
           </div>
         ) : (
