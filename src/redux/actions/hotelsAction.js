@@ -5,6 +5,7 @@ import axios from "axios";
 const filterHotels = createAsyncThunk("filterHotels", async (data) => {
   const inputText = data.name;
   const inputOrder = data.order;
+  console.log(data);
   const res = await axios.get(
     `${base_url}/hotel/?name=${inputText}&order=${inputOrder}`
   );

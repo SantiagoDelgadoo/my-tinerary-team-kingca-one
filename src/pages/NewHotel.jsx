@@ -1,4 +1,4 @@
-import React,{ useEffect } from "react";
+import React, { useEffect } from "react";
 import { useRef } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -12,7 +12,9 @@ export default function NewHotel() {
   let navigate = useNavigate();
   let idCity = useRef();
   let { id } = useSelector((store) => store.userReducer);
-  const citiesFiltered = useSelector((store) => store.citiesReducer.listContinents);
+  const citiesFiltered = useSelector(
+    (store) => store.citiesReducer.listContinents
+  );
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(citiesAction.allCities()); //dispatch sirve para despachar acciones, adentro de los () se pasa la accion q cree de redux y si le quiero pasar algo mas a esa accion se pasa como data
@@ -61,7 +63,7 @@ export default function NewHotel() {
       photo: place.target[2].value,
       capacity: place.target[3].value,
       userId: id,
-      cityId: "636d5c20033f2a5f173b112e",
+      cityId: idCity,
     };
     postHotel(NewPlace);
     NewPlaceForm.current.reset();
