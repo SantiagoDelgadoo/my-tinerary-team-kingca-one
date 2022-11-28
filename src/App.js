@@ -58,6 +58,7 @@ function App() {
         </Route>
         <Route element={<ProtectedRoute isAllowed={!!logged} reDirect={"/"} />}>
         <Route path="/myprofile" element={<MyProfile />}></Route>
+
           <Route
             path="/newcity"
             element={
