@@ -7,10 +7,12 @@ import Swal from "sweetalert2";
 export default function CardDetailsEvents() {
   const shows = useSelector((store) => store.showsReducer.showUser);
   const dispatch = useDispatch();
+  let { id,token } = useSelector((store) => store.userReducer);
   const { getShowUser } = showAction;
   const { deleteShowUser } = showAction;
+
   useEffect(() => {
-    dispatch(getShowUser());
+    dispatch(getShowUser(id));
   }, []);
 
   return (
@@ -38,7 +40,7 @@ export default function CardDetailsEvents() {
                   width: "25rem",
                   padding: "2rem",
                 });
-                dispatch(deleteShowUser({ id: event._id }));
+                dispatch(deleteShowUser({ id: event._id,token:token}));
               }
             });
           };

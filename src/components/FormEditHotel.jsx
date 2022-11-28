@@ -1,10 +1,11 @@
 import React from "react";
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import hotelsAction from "../redux/actions/hotelsAction";
 
 export default function FormEditShow() {
   const dispatch = useDispatch();
+  const { token } = useSelector((store) => store.userReducer);
   const id = useRef();
   const name = useRef();
   const photo = useRef();
@@ -23,6 +24,7 @@ export default function FormEditShow() {
         photo: photo.current.value,
         capacity: capacity.current.value,
       },
+      token:token,
     };
     dispatch(hotelsAction.editHotelAdmin(editHotel));
     form.current.reset();
@@ -82,7 +84,7 @@ export default function FormEditShow() {
               placeholder="Enter url photo"
             />
           </label>
-          <button onClick={edit} className="botonSubmit">
+          <button onClick={edit} className="botonSubmitEditHotel">
             Edit
           </button>
         </form>

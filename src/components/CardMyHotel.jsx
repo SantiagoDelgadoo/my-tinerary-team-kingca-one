@@ -6,12 +6,13 @@ import Swal from "sweetalert2";
 
 export default function CardDetailsEvents() {
   const hotel = useSelector((store) => store.hotelReducer.hotelAdmin);
-  console.log(hotel);
   const dispatch = useDispatch();
-  const { getHotelAdmin } = hotelsAction;
+  let { id,token } = useSelector((store) => store.userReducer);
+  console.log(id);
+  const { getHotelAdmin} = hotelsAction;
   const { deleteHotelAdmin } = hotelsAction;
   useEffect(() => {
-    dispatch(getHotelAdmin());
+    dispatch(getHotelAdmin(id));
   }, []);
 
   return (
@@ -39,7 +40,7 @@ export default function CardDetailsEvents() {
                   width: "25rem",
                   padding: "2rem",
                 });
-                dispatch(deleteHotelAdmin({ id: event._id }));
+                dispatch(deleteHotelAdmin({ id: event._id,token:token }));
               }
             });
           };

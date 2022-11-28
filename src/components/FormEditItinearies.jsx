@@ -1,10 +1,10 @@
 import React from "react";
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import itinerariesAction from "../redux/actions/itinerariesAction";
 
 export default function FormEditItinearies() {
-
+  let { token } = useSelector((store) => store.userReducer);
   const id = useRef();
   const name = useRef();
   const description = useRef();
@@ -24,6 +24,7 @@ export default function FormEditItinearies() {
         price: price.current.value,
         duration: duration.current.value,
       },
+      token:token
     };
     dispatch(editItineraries(objeto));
   };

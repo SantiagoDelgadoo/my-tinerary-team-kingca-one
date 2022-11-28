@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function NewCity() {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ export default function NewCity() {
 
       .catch((Error) => console.log(Error)); //si no devuelve una respuesta exitosa, va a devolver error
   };
+  let { id } = useSelector((store) => store.userReducer);
   let NewCityForm = useRef();
   let submit = (e) => {
     e.preventDefault();
@@ -56,7 +58,7 @@ export default function NewCity() {
       continent: e.target[1].value,
       photo: e.target[2].value,
       population: e.target[3].value,
-      userid: "636d39111834aa8ba98269f3",
+      userid: id,
     };
     postCity(NewCity);
     NewCityForm.current.reset();
@@ -68,8 +70,8 @@ export default function NewCity() {
         <form
           ref={NewCityForm}
           onSubmit={submit}
-          className="containerFormCities"
-        >
+          className="containerFormCities">
+            
           <label className="labelNewCity">
             {" "}
             Name of city

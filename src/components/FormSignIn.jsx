@@ -1,20 +1,49 @@
 import React from "react";
 import "../App.css";
-import { NavLink} from "react-router-dom";
+import { Navigate, NavLink, useNavigate} from "react-router-dom";
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import userActions from "../redux/actions/userActions";
 
 export default function SignIn() {
   let mail = useRef()
   let pass = useRef()
   let form = useRef()
-  function User(evento) {
-    evento.preventDefault();
-
+  const dispatch = useDispatch();
+  const { login} = userActions;
+  const navigate = useNavigate()
+ 
+  async function User(data) {
+    data.preventDefault();
     let User = {
-      mail: mail.current.value,
-      pass: pass.current.value,
+      email: mail.current.value,
+      password: pass.current.value,
     };
-    localStorage.setItem("User", JSON.stringify(User));
+    try{
+      let res = await dispatch (login(User))
+      if (res.payload.response.success){
+        Swal.fire({
+          title: "WELCOME",
+          imageUrl:
+            "https://img.freepik.com/premium-vector/white-exclamation-mark-sign-red-circle-isolated-white-background_120819-332.jpg?w=2000",
+          width: "25rem",
+          padding: "2rem",
+        })
+        navigate("/")
+      }else{
+        Swal.fire({
+          title: "Email or Password invalid",
+          imageUrl:
+            "https://img.freepik.com/premium-vector/white-exclamation-mark-sign-red-circle-isolated-white-background_120819-332.jpg?w=2000",
+          width: "25rem",
+          padding: "2rem",
+        })
+      }
+    }
+    catch(error){
+     
+    }
     form.current.reset();
   }
   return (
