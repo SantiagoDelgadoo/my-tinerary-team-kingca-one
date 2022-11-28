@@ -62,6 +62,8 @@ nav {
   z-index: 20;
 }
 
+
+
 .buttonHeader {
   cursor: pointer;
   width: 55px;
@@ -101,8 +103,15 @@ ul:hover {
   font-weight: 700;
 }
 
+.logoutPoint {
+  cursor: pointer;
+}
+
 .usuario img {
   width: 60px;
+  height: 60px;
+  border-radius: 180px;
+  object-fit: cover;
 }
 rgba .usuario {
   display: flex;
@@ -1606,6 +1615,9 @@ fieldset {
 .containerNavBarUser {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .usuarioybotones {
   display: flex;
