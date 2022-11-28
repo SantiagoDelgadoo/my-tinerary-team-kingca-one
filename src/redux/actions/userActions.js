@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { base_url } from "../../api/url";
 
+
 const login = createAsyncThunk("login", async (data) => {
   try {
     let user = await axios.post(`${base_url}auth/signin`, data);
@@ -16,6 +17,22 @@ const login = createAsyncThunk("login", async (data) => {
     };
   }
 });
+
+const Logout= createAsyncThunk("Logout", async (data) => {
+  const headers = { headers: { "Authorization":` Bearer ${data}` } };
+  try {
+    let user = await axios.post(`${base_url}auth/sign-out`, null, headers);
+    return {
+      success: true,
+    };
+  } catch (error) {
+    console.log(error.message);
+    return {
+      success: false,
+    };
+  }
+});
+
 const reIngress = createAsyncThunk("reIngress", async (token) => {
   let url = `${base_url}auth/token`;
   let headers = { headers: { Authorization: `Bearer ${token}` } };
@@ -55,8 +72,12 @@ const editUser = createAsyncThunk("editUser", async (data) => {
 const userActions = {
   login,
   reIngress,
+
   getUser,
   editUser,
+
+  Logout
+
 };
 
 export default userActions;

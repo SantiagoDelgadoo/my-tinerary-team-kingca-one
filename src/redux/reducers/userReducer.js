@@ -1,6 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import userActions from "../actions/userActions";
-const { login, reIngress, getUser, editUser } = userActions;
+
+const { login, reIngress, getUser, editUser, Logout } = userActions;
 
 const initialState = {
   id: "",
@@ -38,6 +39,31 @@ const userReducer = createReducer(initialState, (builder) => {
       return newState;
     }
   });
+
+
+
+  builder.addCase(Logout.fulfilled, (state, action) => {
+    const { success } = action.payload;
+    if (success) {
+      localStorage.removeItem('token');
+      let newState = {...state,
+        id: "",
+        name: "",
+        photo: "",
+        logged: false,
+        token: "",
+        role: "",
+      } 
+      console.log("soy un console log");
+      return newState
+    } else {
+      let newState = {
+        ...state,
+      };
+      return newState;
+    }
+  });
+
   builder.addCase(reIngress.fulfilled, (state, action) => {
     const { response } = action.payload;
 

@@ -57,9 +57,6 @@ function App() {
           <Route path="/signin" element={<SignIn />}></Route>
         </Route>
         <Route element={<ProtectedRoute isAllowed={!!logged} reDirect={"/"} />}>
-          <Route path="/myshows" element={<MyShows />}></Route>
-          <Route path="/myitineraries" element={<MyIneraries />}></Route>
-          <Route path="/myprofile" element={<MyProfile />}></Route>
 
           <Route
             path="/newcity"
@@ -72,6 +69,33 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+
+          <Route 
+            path="/myitineraries"
+            element={
+              <ProtectedRoute
+                isAllowed={!!logged && role === "user"}
+                reDirect={"/"}
+              >
+                <MyIneraries />
+              </ProtectedRoute>
+            }
+          />
+
+
+        <Route
+          path="/myshows"
+            element={
+              <ProtectedRoute
+                isAllowed={!!logged && role === "user"}
+                reDirect={"/"}
+              >
+                <MyShows />
+              </ProtectedRoute>
+            }
+          />
+
 
           <Route
             path="/newhotel"
