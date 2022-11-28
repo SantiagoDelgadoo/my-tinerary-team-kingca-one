@@ -1,10 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import userActions from "../actions/userActions";
-<<<<<<< HEAD
-const { login, reIngress, getUser, editUser } = userActions;
-=======
-const { login, reIngress, Logout } = userActions;
->>>>>>> 5f4f6617af800559ce5b4c738cbd1472637ce689
+const { login, reIngress, getUser, editUser,Logout } = userActions;
 
 const initialState = {
   id: "",

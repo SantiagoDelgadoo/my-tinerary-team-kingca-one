@@ -102,7 +102,7 @@ export default function NewHotel() {
             <input type="text" placeholder="Enter Capacity" />
           </label>
 
-          <label>City</label>
+          <label className="selectCity">City
           <select ref={idCity}>
             <option value="">Choose City</option>
             {citiesFiltered.map((city) => (
@@ -111,7 +111,7 @@ export default function NewHotel() {
               </option>
             ))}
           </select>
-          <label></label>
+          </label>
           <button className="botonSubmit">Send</button>
         </form>
       </div>

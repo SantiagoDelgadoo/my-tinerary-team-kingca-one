@@ -68,7 +68,7 @@ export default function FormEditCities() {
               placeholder="Enter description of population"
             />
           </label>
-          <button onClick={sendForm} className="botonSubmit">
+          <button onClick={sendForm} className="botonSubmitEditHotel">
             Send
           </button>
         </form>

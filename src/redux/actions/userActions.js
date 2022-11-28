@@ -72,12 +72,9 @@ const editUser = createAsyncThunk("editUser", async (data) => {
 const userActions = {
   login,
   reIngress,
-<<<<<<< HEAD
   getUser,
   editUser,
-=======
   Logout
->>>>>>> 5f4f6617af800559ce5b4c738cbd1472637ce689
 };
 
 export default userActions;
