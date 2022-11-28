@@ -6,7 +6,7 @@ import citiesAction from "../redux/actions/citiesAction";
 import Swal from "sweetalert2";
 
 export default function MyCities() {
-  let { id } = useSelector((store) => store.userReducer);
+  let { id, token } = useSelector((store) => store.userReducer);
   console.log(id);
 
   const dispatch = useDispatch();
@@ -64,7 +64,7 @@ export default function MyCities() {
                     width: "25rem",
                     padding: "2rem",
                   });
-                  dispatch(deleteMyCities({ id: event._id }));
+                  dispatch(deleteMyCities({ id: event._id, token:token }));
                 }
               });
             };
