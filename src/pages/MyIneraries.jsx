@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import FormCreateItineraries from "../components/FormCreateItineraries";
 
 export default function MyIneraries() {
-  let { id } = useSelector((store) => store.userReducer);
+  let { id, token } = useSelector((store) => store.userReducer);
 
   const dispatch = useDispatch();
   const itineraries = useSelector(
@@ -69,7 +69,7 @@ export default function MyIneraries() {
                     width: "25rem",
                     padding: "2rem",
                   });
-                  dispatch(deleteItineraries({ id: event._id }));
+                  dispatch(deleteItineraries({ id: event._id, token:token }));
                 }
               });
             };
