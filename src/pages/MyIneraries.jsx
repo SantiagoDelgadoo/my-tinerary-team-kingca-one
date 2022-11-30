@@ -41,12 +41,9 @@ export default function MyIneraries() {
       </div>
       <div className="divDelForm">
         <div className="formulariosDeItineraries">
-        <FormEditItinearies></FormEditItinearies>
-        <FormCreateItineraries></FormCreateItineraries>
+          <FormEditItinearies></FormEditItinearies>
+          <FormCreateItineraries></FormCreateItineraries>
         </div>
-        <h3 className="subtituloCities">
-          <span className="colorNaranjaDeLinea">| </span>My Itinearies
-        </h3>
         <div className="myshowsContainer">
           {itineraries.map((event) => {
             const Delete = async () => {
@@ -69,27 +66,19 @@ export default function MyIneraries() {
                     width: "25rem",
                     padding: "2rem",
                   });
-                  dispatch(deleteItineraries({ id: event._id, token:token }));
+                  dispatch(deleteItineraries({ id: event._id, token: token }));
                 }
               });
             };
 
             return (
-              <div className="cardMyshowEditContainer">
-                <div className="cardDetailsEdit">
-                  <div className="cardPhotoEdit">
-                    <img src={event.photo} alt="" />
-                  </div>
-                  <div className="cardTextEdits">
-                    <h2>{event.name}</h2>
-                    <p>
-                      <span>ID: </span>
-                      {event._id}
-                    </p>
-                    <button onClick={Delete} className="botonDeDelete">
-                      Delete
-                    </button>
-                  </div>
+              <div className="containerCardsitineraries">
+                <div className="cardimgitinerary">
+                  <img src={event.photo} alt="Imagen de card" />
+                  <h3 className="subtituloCitiesCard">{event.name}</h3>
+                </div>
+                <div>
+                  <button onClick={Delete}  className="buttonDetailsCities">Delete</button>
                 </div>
               </div>
             );
