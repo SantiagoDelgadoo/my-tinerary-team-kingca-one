@@ -2,8 +2,11 @@ import React from "react";
 import FormProfile from "../components/FormProfile";
 import CardProfile from "../components/CardProfile";
 import FormNewReaction from "../components/FormNewReaction";
+import admin from "../data/admin";
+import { useSelector } from "react-redux";
 
 export default function MyShows() {
+  let { role } = useSelector((store) => store.userReducer);
   return (
     <>
       <div className="containerProfile">
@@ -14,7 +17,7 @@ export default function MyShows() {
         <CardProfile />
       </div>
       <div>
-      <FormNewReaction></FormNewReaction>
+        {role==="admin"?<FormNewReaction></FormNewReaction>:null}
       </div>
     </>
   );

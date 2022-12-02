@@ -735,6 +735,7 @@ fieldset {
   height: 100%;
 }
 
+
 .fatherPhoto img {
   width: 100%;
   height: 100%;
@@ -1760,4 +1761,18 @@ fieldset {
 .selectCityShow select{
   padding: 0.5rem;
   width: 100%;
+}
+
+#imageReactionnn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+}
+
+#containerReactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
