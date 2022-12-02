@@ -52,7 +52,7 @@ console.log(filteredComments);
         {seeComment ? (
           <div className="containerComment">
             <div className="containerCreateComment">
-            <NewComment></NewComment>
+            <NewComment event={event._id}></NewComment>
             </div>
             <div className="containerCommentaries">
               <h3>Comments</h3>

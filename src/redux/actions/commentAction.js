@@ -17,9 +17,9 @@ const createComment = createAsyncThunk("createComment", async (data) => {
       console.log(data);    
       let headers = { headers: { Authorization: `Bearer ${data.token}` } };
       const res = await axios.post(`${base_url}comments/`, data.data,headers);
-      console.log(res.data.new_comment);
+      console.log(res.data);
       return {
-        listComment: res.data.new_comment,
+        listComment: res.data.comment,
       };
     } catch (error) {
       console.log(error.message);
