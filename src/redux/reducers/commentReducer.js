@@ -14,5 +14,22 @@ const commentReducer = createReducer(initialState, (builder) => {
       ...state,listComment:state.listComment.concat(action.payload.listComment),
     };
   });
+  builder.addCase(commentAction.deleteComment.fulfilled, (state, action) => {
+    return {
+      ...state,
+      listComment: state.listComment.filter(
+        (event) => event._id !== action.payload.listComment
+      ),
+    };
+  });
+  builder.addCase(commentAction.editComment.fulfilled, (state, action) => {
+    return {
+      ...state,
+      listComment: state.listComment
+        .filter((event) => event._id !== action.payload.listComment._id)
+        .concat(action.payload.listComment),
+    };
+  });
+
 });
 export default commentReducer;
