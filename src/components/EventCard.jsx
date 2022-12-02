@@ -9,6 +9,7 @@ import NewComment from "./NewComment";
 
 export default function EventCard(props) {
   let { event } = props;
+  console.log(event);
   let [seeComment, setSeeComment] = useState(false);
   const dispatch = useDispatch();
   const { getComments } = commentAction;
@@ -18,6 +19,7 @@ export default function EventCard(props) {
     dispatch(getComments(event._id));
     setSeeComment(!seeComment);
   };
+  
 
   const filteredComments = comments.filter(
     (comment) => comment.showId === event._id
@@ -50,13 +52,13 @@ console.log(filteredComments);
         {seeComment ? (
           <div className="containerComment">
             <div className="containerCreateComment">
-            <NewComment event={event}></NewComment>
+            <NewComment event={event._id}></NewComment>
             </div>
             <div className="containerCommentaries">
               <h3>Comments</h3>
               <div className="comment">
                 {filteredComments[0]?.arrayComment?.map((comment) => (
-                  <Comments comment={comment}></Comments>
+                  <Comments comment={comment} event={event}></Comments>
                 ))}
               </div>
             </div>

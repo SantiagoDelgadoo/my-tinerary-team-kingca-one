@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import commentAction from "../redux/actions/commentAction";
 import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 export default function NewComment(props) {
   let { event } = props;
@@ -12,6 +13,7 @@ export default function NewComment(props) {
   let date = Date.now();
   const commentss = useRef();
   const form = useRef();
+  console.log(event);
   let create = (comment) => {
     comment.preventDefault();
     let createComment = {
@@ -19,11 +21,32 @@ export default function NewComment(props) {
       data: {
         comment: commentss.current.value,
         date: date,
-        showId: event._id,
+        showId: event,
       },
     };
-    dispatch(commentAction.createComment(createComment));
-    form.current.reset();
+    Swal.fire({
+      title: "Are you sure to create this comment?",
+      imageUrl:
+        "https://img.freepik.com/premium-vector/white-exclamation-mark-sign-red-circle-isolated-white-background_120819-332.jpg?w=2000",
+      width: "25rem",
+      padding: "2rem",
+      showCancelButton: true,
+      confirmButtonColor: "#ea5318",
+      cancelButtonColor: "#5e5b5b",
+      confirmButtonText: "Yes, create it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "The Comment has created",
+          imageUrl:
+            "https://cdn-icons-png.flaticon.com/128/7807/7807573.png",
+          width: "25rem",
+          padding: "2rem",
+        });
+        dispatch(commentAction.createComment(createComment));
+        form.current.reset();;
+      }})
+
   };
   return (
     <>

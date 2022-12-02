@@ -14,21 +14,42 @@ console.log(show);
 });
 const createComment = createAsyncThunk("createComment", async (data) => {
     try {
-      console.log(data);
+      console.log(data);    
       let headers = { headers: { Authorization: `Bearer ${data.token}` } };
       const res = await axios.post(`${base_url}comments/`, data.data,headers);
-      console.log(res.data.new_comment);
+      console.log(res.data);
       return {
-        listComment: res.data.new_comment,
+        listComment: res.data.comment,
       };
     } catch (error) {
       console.log(error.message);
     }
   });
+  const deleteComment = createAsyncThunk("deleteComment", async (data) => {
+    const id = data.id;
+    const token= data.token;
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
+    const res = await axios.delete(`${base_url}comments/${id}`,headers);
+    console.log(res.data);
+    return {
+       
+        listComment: res.data.id,
+    };
+  });
+  const editComment = createAsyncThunk("editComment", async (data) => {
+    const { id, info,token } = data;
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
+    const res = await axios.patch(`${base_url}comments/${id}`,info,headers);
+    return {
+        listComment: res.data.id,
+    };
+  });
 
 const commentAction = {
     getComments,
-    createComment
+    createComment,
+    deleteComment,
+    editComment
   };
   
   export default commentAction;
