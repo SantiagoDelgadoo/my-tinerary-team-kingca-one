@@ -7,6 +7,7 @@ import axios from "axios";
 export default function CardDetailsHotel() {
   let { id } = useParams();
   let [hotel, setHotels] = useState([]);
+
   console.log(id);
   useEffect(() => {
     axios

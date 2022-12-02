@@ -6,7 +6,7 @@ import commentAction from "../redux/actions/commentAction";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 export default function Comments(props) {
-  let { event, comment } = props;
+  let { event, comment ,update,setUpdate} = props;
   console.log();
   const dispatch = useDispatch();
   let { token } = useSelector((store) => store.userReducer);
@@ -39,7 +39,11 @@ export default function Comments(props) {
           padding: "2rem",
         });
         dispatch(deleteComment({ id: comment._id, token: token }));
+        setUpdate(!update)
       }
+    }).then ((l)=>{
+        console.log(update);
+        setUpdate(!update);
     });
   };
   let edit = (data) => {

@@ -8,7 +8,7 @@ import Comments from "../components/Comments";
 import NewComment from "./NewComment";
 
 export default function EventCard(props) {
-  let { event } = props;
+  let { event ,update, setUpdate } = props;
   console.log(event);
   let [seeComment, setSeeComment] = useState(false);
   const dispatch = useDispatch();
@@ -52,13 +52,13 @@ console.log(filteredComments);
         {seeComment ? (
           <div className="containerComment">
             <div className="containerCreateComment">
-            <NewComment event={event._id}></NewComment>
+            <NewComment event={event._id} update={update}  setUpdate={setUpdate}></NewComment>
             </div>
             <div className="containerCommentaries">
               <h3>Comments</h3>
               <div className="comment">
                 {filteredComments[0]?.arrayComment?.map((comment) => (
-                  <Comments comment={comment} event={event}></Comments>
+                  <Comments comment={comment} event={event} update={update}  setUpdate={setUpdate}></Comments>
                 ))}
               </div>
             </div>
