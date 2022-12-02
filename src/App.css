@@ -580,6 +580,23 @@ fieldset {
 .buttonDetailsCities:hover {
   background-color: #467be7;
 }
+.buttonComment {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #ea5318;
+  color: white;
+  border: none;
+}
+.buttonComment > a {
+  color: white;
+  text-decoration: none;
+}
+.buttonComment:hover {
+  background-color: #467be7;
+}
 
 /* ARRANCA NEWCITY */
 .containerNewCity {
@@ -1721,4 +1738,109 @@ fieldset {
 .selectCityShow select{
   padding: 0.5rem;
   width: 100%;
+}
+.containerComment{
+  display: flex;
+  margin: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 40rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  display: flex;
+}
+.containerTotal{
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.containerCommentaries{
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.containerCreateComment{
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.comment{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  overflow-y: scroll;
+}
+.comment::-webkit-scrollbar{
+  background-color: rgb(255, 255, 255);
+  width: 7px;
+  height: 20px;
+    }
+
+    .comment::-webkit-scrollbar-thumb{
+
+      background-color: #ea5318;
+      border-radius: 20px;
+    
+    }
+.comment2{
+  width: 80%;
+  height: 3rem;
+  background-color: #e7e7e7;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.inputComment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 20rem;
+  height: 5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 3px solid #ea5318;
+}
+.labelEditComment{
+  width: 20rem;
+  height: 5rem;
+}
+.formComment{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40rem;
+}
+.botonSubmitEditHotel{
+  width: 10rem;
+  align-self: center;
+  justify-self: center
+}
+.botonesEditar{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 5px;
+}
+.imgeditar{
+  width: 15px;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
