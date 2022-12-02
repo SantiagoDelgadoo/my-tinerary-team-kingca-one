@@ -4,7 +4,11 @@ import hotelsReducer from "./hotelsReducer"
 import showsReducer from "./showsReducer"
 import hotelReducer from "./myHotelsReducer"
 import userReducer from "./userReducer"
+
+import commentReducer from "./commentReducer"
+
 import reactionsReducer from "./reactionsReducer"
+
 const routeReducer = {
     citiesReducer,
     itineraryReducer,
@@ -12,6 +16,8 @@ const routeReducer = {
     showsReducer,
     hotelReducer,
     userReducer,
+    commentReducer
     reactionsReducer,
+
 }
 export default routeReducer
