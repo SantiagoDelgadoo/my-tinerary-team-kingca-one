@@ -15,7 +15,7 @@ export default function Comments(props) {
 
     const Delete = () => {
         Swal.fire({
-          title: "Are you sure to delete this Hotel?",
+          title: "Are you sure to delete this Comment?",
           imageUrl:
             "https://img.freepik.com/premium-vector/white-exclamation-mark-sign-red-circle-isolated-white-background_120819-332.jpg?w=2000",
           width: "25rem",
@@ -27,7 +27,7 @@ export default function Comments(props) {
         }).then((result) => {
           if (result.isConfirmed) {
             Swal.fire({
-              title: "The Hotel has deleted",
+              title: "The Comment has deleted",
               imageUrl:
                 "https://cdn-icons-png.flaticon.com/128/7807/7807573.png",
               width: "25rem",
