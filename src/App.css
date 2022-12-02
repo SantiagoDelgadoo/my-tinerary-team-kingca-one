@@ -530,6 +530,11 @@ fieldset {
   justify-content: space-evenly;
 }
 
+
+
+
+
+
 .containerCards {
   z-index: 1;
   display: flex;
@@ -1775,4 +1780,40 @@ fieldset {
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+
+#imgReaction2 {
+  height: 350px;
+  width: 350px;
+}
+
+.containerCards3 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  min-height: 65vh;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.cardImg h2 {
+  font-size: 20px;
+}
+
+#container10 {
+  width: 350px;
+  height: 350px;
+}
+
+.buttonDetailsCities43{
+width: 350px;
+height: 50px;
+font-size: 20px;
+font-weight: 700;
+border-radius: 0px 0px 20px 20px;
+background-color: #ea5318;
+color: white;
+border: none;
+cursor: pointer;
 }

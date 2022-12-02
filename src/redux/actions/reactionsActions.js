@@ -6,13 +6,13 @@ const reactions = createAsyncThunk("reactionOfTinerary", async (data) => {
     const { token, id } = data;
     console.log(token);
     /* console.log(id); */
-  /*   let headers = { headers: { Authorization: `Bearer ${token}` } }; */
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
 
     try {
         const respuesta = await axios.get(
             `${base_url}reaction/?itineraryid=${id}`,
 
-           /*  headers */
+            headers
         );
 
         return {
@@ -38,7 +38,7 @@ const likeDislike = createAsyncThunk("likeDislike", async (data) => {
             null,
             headers
         );
-            console.log(respuesta);
+        console.log(respuesta);
         return {
             success: true,
             reaction: respuesta.data.reaction,
