@@ -37,7 +37,7 @@ console.log(filteredComments);
             <div>
               <p>
                 <span>Date: </span>
-                {event.date}
+                {event.date.slice(0,10)}
               </p>
               <p>
                 <span>Capacity: </span>

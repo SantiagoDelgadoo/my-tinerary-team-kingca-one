@@ -36,10 +36,10 @@ const createComment = createAsyncThunk("createComment", async (data) => {
         listComment: res.data.id,
     };
   });
-  const editComment = createAsyncThunk("editComment", async (data) => {
-    const { id, info,token } = data;
+  const editComment = createAsyncThunk("editComment", async (info) => {
+    const {id, data,token } = info;
     let headers = { headers: { Authorization: `Bearer ${token}` } };
-    const res = await axios.patch(`${base_url}comments/${id}`,info,headers);
+    const res = await axios.patch(`${base_url}comments/${id}`,data,headers);
     return {
         listComment: res.data.id,
     };

@@ -16,7 +16,7 @@ const routeReducer = {
     showsReducer,
     hotelReducer,
     userReducer,
-    commentReducer
+    commentReducer,
     reactionsReducer,
 
 }
