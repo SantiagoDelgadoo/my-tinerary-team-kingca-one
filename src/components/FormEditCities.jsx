@@ -1,10 +1,10 @@
 import React from "react";
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import citiesAction from "../redux/actions/citiesAction";
 
 export default function FormEditCities() {
-
+  let { token } = useSelector((store) => store.userReducer);
   const id = useRef();
   const name = useRef();
   const photo = useRef();
@@ -20,6 +20,7 @@ export default function FormEditCities() {
         population: population.current.value,
         photo: photo.current.value,
       },
+      token:token
     };
     dispatch(citiesAction.editCity(objeto));
     console.log(objeto);

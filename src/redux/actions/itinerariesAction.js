@@ -16,8 +16,9 @@ const getItineraries = createAsyncThunk ('getItineraries',async (id)=>{ //uso as
 
 const deleteItineraries = createAsyncThunk ('deleteItineraries',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
     const id = data.id
+    let headers = { headers: { Authorization: `Bearer ${data.token}` } };
     try {
-        const res = await axios.delete(`${base_url}/itinerary/${id}`) //me guardo rta de axios que seria el objeto borrado
+        const res = await axios.delete(`${base_url}/itinerary/${id}`, headers) //me guardo rta de axios que seria el objeto borrado
         return {
             itineriesdeleted: res.data.id //aca guardo este objeto para dsp borrarlo del array
         }
@@ -39,9 +40,10 @@ const createItineraries = createAsyncThunk ('createItineraries',async (data)=>{ 
 })
 
 const editItineraries = createAsyncThunk ('editItineraries',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
-    const {id, info} = data;
+    const {id, info, token} = data;
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-        const res = await axios.put(`${base_url}/itinerary/${id}`,(info), {new: true} //me guardo la rta de axios que seria el objeto editado
+        const res = await axios.put(`${base_url}/itinerary/${id}`,(info), headers //me guardo la rta de axios que seria el objeto editado
         );
         console.log(res.data);
         return {

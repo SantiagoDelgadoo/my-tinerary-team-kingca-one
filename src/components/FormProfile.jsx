@@ -49,9 +49,6 @@ export default function FormEditShow() {
   };
   return (
     <div className="containerFormUser">
-      <h4 className="subtituloSignUpEdit">
-        <span className="colorNaranjaDeLinea">|</span>Edit your Profile
-      </h4>
       <form ref={form} className="formUser">
         <label className="labelEditUser">
           First Name

@@ -44,8 +44,9 @@ const getMyCities = createAsyncThunk  ('getMyCities',async (userId)=>{ //uso ass
 
 const deleteMyCities = createAsyncThunk ('deleteMyCities',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
     const id = data.id //data siempre tiene que ser un objeto
+    let headers = { headers: { Authorization: `Bearer ${data.token}` } };
     try {
-        const res = await axios.delete(`${base_url}/city/${id}`) //me guardo rta de axios que seria el objeto borrado
+        const res = await axios.delete(`${base_url}/city/${id}`, headers) //me guardo rta de axios que seria el objeto borrado
         return {
             mycitiesdeleted: res.data.id //aca guardo este objeto para dsp borrarlo del array
         }
@@ -55,10 +56,11 @@ const deleteMyCities = createAsyncThunk ('deleteMyCities',async (data)=>{ //uso 
 })
 
 const editCity = createAsyncThunk ('editCity',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
-    const {id, info} = data;
+    const {id, info, token} = data;
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
 
-        const res = await axios.put(`${base_url}/city/${id}`,info
+        const res = await axios.put(`${base_url}/city/${id}`,info, headers
 
         );
         console.log(res.data);
