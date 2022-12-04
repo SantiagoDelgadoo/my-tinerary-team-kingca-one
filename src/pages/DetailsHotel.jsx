@@ -1,10 +1,10 @@
 import React from 'react'
 import CardDetailsHotel from '../components/CardDetailsHotel'
 import CardDetailsEvents from '../components/CardDetailsEvents'
+import { useState } from "react";
 
 import '../App.css'
 export default function DetailsHotel() {
-
   return (<>
      <div className='containerCardDetails'>
         <CardDetailsHotel/>

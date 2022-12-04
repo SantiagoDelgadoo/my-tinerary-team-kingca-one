@@ -44,5 +44,4 @@ let admin = [
         logged: "true"
     }
 ]
-console.log(admin);
 export default admin

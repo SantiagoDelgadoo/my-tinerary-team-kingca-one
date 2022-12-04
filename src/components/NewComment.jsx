@@ -13,7 +13,6 @@ export default function NewComment(props) {
   let date = Date.now();
   const commentss = useRef();
   const form = useRef();
-  console.log(event);
   let create = (comment) => {
     comment.preventDefault();
     let createComment = {
@@ -50,11 +49,9 @@ export default function NewComment(props) {
   };
   return (
     <>
-      <h3>Create Comment</h3>
       <form ref={form} className="formComment">
         <label className="labelEditComment">
-          Comment
-          <input
+          <textarea
             ref={commentss}
             className="inputComment"
             type="text"
@@ -62,7 +59,7 @@ export default function NewComment(props) {
           />
         </label>
         <button onClick={create} className="botonSubmitEditHotel">
-          Create
+          Comment
         </button>
       </form>
     </>

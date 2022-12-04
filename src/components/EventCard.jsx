@@ -8,23 +8,30 @@ import Comments from "../components/Comments";
 import NewComment from "./NewComment";
 
 export default function EventCard(props) {
-  let { event ,update, setUpdate } = props;
-  console.log(event);
+  let { event } = props;
   let [seeComment, setSeeComment] = useState(false);
   const dispatch = useDispatch();
+  let [comments1, setComments] = useState([]);
   const { getComments } = commentAction;
   let comments = useSelector((store) => store.commentReducer.listComment);
-  console.log(comments);
-  let change = () => {
-    dispatch(getComments(event._id));
+  let update = useSelector((store) => store.commentReducer.update);
+  let change = async () => {
     setSeeComment(!seeComment);
+    const capurarComments = await dispatch(getComments(event._id));
+    setComments(capurarComments.payload.listComment.arrayComment)
   };
-  
-
-  const filteredComments = comments.filter(
+  useEffect(()  => {
+    async function peticionComment () {
+      const capurarComments = await dispatch(getComments(event._id));
+    setComments(capurarComments.payload.listComment.arrayComment)
+    }
+    peticionComment()
+  }, [update]);
+  console.log(comments1);
+  const filteredComments = comments1.filter(
     (comment) => comment.showId === event._id
   );
-console.log(filteredComments);
+  console.log(filteredComments);
   return (
     <>
       <div className="containerTotal">
@@ -52,13 +59,12 @@ console.log(filteredComments);
         {seeComment ? (
           <div className="containerComment">
             <div className="containerCreateComment">
-            <NewComment event={event._id} update={update}  setUpdate={setUpdate}></NewComment>
+            <NewComment event={event._id}></NewComment>
             </div>
             <div className="containerCommentaries">
-              <h3>Comments</h3>
               <div className="comment">
-                {filteredComments[0]?.arrayComment?.map((comment) => (
-                  <Comments comment={comment} event={event} update={update}  setUpdate={setUpdate}></Comments>
+                {filteredComments?.map((comment) => (
+                  <Comments comment={comment} event={event}></Comments>
                 ))}
               </div>
             </div>

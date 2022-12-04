@@ -108,5 +108,4 @@ let events = [
         userId: "user12",
     },
 ]
-console.log(events);
 export default events

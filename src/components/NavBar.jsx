@@ -125,9 +125,10 @@ export default function NavBar() {
 
             <div className="containerNavBarUser">
               <div className="containerNamePhoto">
-                <ul>Hello: {name}</ul>
-                {logged ? (
+                {logged ? (<>
+                  <ul>Hello: {name}</ul>
                   <img src={photo} onClick={change} alt="Usuario" />
+                </>
                 ): null}
               </div>
                   <div className="containerNavUser">

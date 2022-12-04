@@ -8,17 +8,19 @@ export default function CardDetailsHotel() {
   let { id } = useParams();
   let [hotel, setHotels] = useState([]);
 
-  console.log(id);
   useEffect(() => {
-    axios
-      .get(`${base_url}/hotel/${id}`)
-      .then((response) => setHotels(response.data.id));
+    async function captureHotel (){
+      const captureObject = await axios.get(`${base_url}/hotel/${id}`)
+      setHotels(captureObject.data.id);
+    }
+    captureHotel()
+    
   }, []);
-
+  console.log(hotel.photo);
   return (
     <div className="cardDetailsHotel">
       <div className="cardPhoto">
-        <img src={hotel.photo} alt="" />
+        <img src={hotel.photo} alt="hotel" />
       </div>
 
       <div className="cardText">

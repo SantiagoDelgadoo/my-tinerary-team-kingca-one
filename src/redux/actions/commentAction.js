@@ -4,9 +4,7 @@ import axios from "axios";
 
 const getComments = createAsyncThunk("getComments", async (id) => {
   const show = id;
-console.log(show);
   const res = await axios.get(`${base_url}comments/?showId=${show}`);
-  console.log(res.data.response);
   return {
     listComment: {showId:id,
         arrayComment:res.data.response},
@@ -33,7 +31,7 @@ const createComment = createAsyncThunk("createComment", async (data) => {
     console.log(res.data);
     return {
        
-        listComment: res.data.id,
+        deleteComments: res.data.id,
     };
   });
   const editComment = createAsyncThunk("editComment", async (info) => {

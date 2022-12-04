@@ -108,5 +108,4 @@ let places = [
         userId: "admin14",
     }, 
 ]
-console.log(places);
 export default places

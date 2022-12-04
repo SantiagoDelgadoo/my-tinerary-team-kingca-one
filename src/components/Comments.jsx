@@ -6,8 +6,8 @@ import commentAction from "../redux/actions/commentAction";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 export default function Comments(props) {
-  let { event, comment ,update,setUpdate} = props;
-  console.log();
+  let [update, setUpdate] = useState(false);
+  let { event, comment} = props;
   const dispatch = useDispatch();
   let { token } = useSelector((store) => store.userReducer);
   const { deleteComment } = commentAction;
@@ -18,7 +18,6 @@ export default function Comments(props) {
   let editBotton = () =>{
     setcheckEdit(!checkEdit);
   }
-  console.log(comment);
   const Delete = () => {
     Swal.fire({
       title: "Are you sure to delete this Comment?",
@@ -41,10 +40,7 @@ export default function Comments(props) {
         dispatch(deleteComment({ id: comment._id, token: token }));
         setUpdate(!update)
       }
-    }).then ((l)=>{
-        console.log(update);
-        setUpdate(!update);
-    });
+    })
   };
   let edit = (data) => {
     data.preventDefault();
@@ -58,6 +54,8 @@ export default function Comments(props) {
       },
     };
     dispatch(commentAction.editComment(editComment));
+    setUpdate(!update)
+    console.log(update);
     form.current.reset();
   };
 
@@ -70,8 +68,13 @@ export default function Comments(props) {
         className="imgFotoComment"
       />
       <div className="comment2">
+        <div className="textComment">
+          <p>
+            <span className="nombreComment">{comment.userId.name}:</span>{" "}
+            {comment.comment}
+          </p>
+        </div>
         <div className="botonesEditar">
-          <div>
             <img
               src="https://cdn-icons-png.flaticon.com/128/860/860814.png"
               onClick={editBotton}
@@ -84,20 +87,13 @@ export default function Comments(props) {
               alt="eliminar"
               className="imgeditar"
             />
-          </div>
-        </div>
-        <div className="textComment">
-          <p>
-            <span className="nombreComment">{comment.userId.name}:</span>{" "}
-            {comment.comment}
-          </p>
         </div>
       </div>
     </div>
     {checkEdit ? (
           <form ref={form} className="formCommentEdit2">
             <label className="labelEditComment2">
-              <input
+              <textarea
                 ref={commentss}
                 className="inputComment2"
                 type="text"

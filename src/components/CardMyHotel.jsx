@@ -60,7 +60,6 @@ export default function CardDetailsEvents() {
                     <span>Description: </span>
                     {
                       event.description
-                      /* .slice(0, 10) */
                     }
                   </p>
                   <p>

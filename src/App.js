@@ -39,8 +39,6 @@ function App() {
       dispatch(reIngress(token.token.user));
     }
   }, []);
-  console.log(logged);
-  console.log(role);
   return (
     <Main>
       <AutoToTop></AutoToTop>

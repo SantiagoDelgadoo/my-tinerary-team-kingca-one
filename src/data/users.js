@@ -44,5 +44,4 @@ let users = [
         logged: "true"
     }
 ]
-console.log(users);
 export default users

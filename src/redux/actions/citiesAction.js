@@ -4,8 +4,6 @@ import { base_url } from "../../api/url";
 const getCities = createAsyncThunk ('getCities',async (data)=>{ //uso assynkthunk para una accion que sea asincrona sino fuese asincrona uso createaction
     const continent = data.continent
     const name = data.name
-    console.log(name);
-    console.log(continent);
     try {
         const res = await axios.get (`${base_url}city/?name=${name}${continent}`) //me guardo rta de axios con get
         console.log(res.data.cities);

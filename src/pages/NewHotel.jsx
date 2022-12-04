@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useRef } from "react";
 import axios from "axios";
+import { base_url } from "../api/url";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router";
@@ -21,7 +22,7 @@ export default function NewHotel() {
   }, []);
   let postHotel = async function (hotel) {
     axios
-      .post("http://localhost:8000/api/hotel/", hotel)
+      .post(`${base_url}hotel/`, hotel)
       .then((Response) => {
         if (Response.data.success) {
           toast.success("Hotel created", {

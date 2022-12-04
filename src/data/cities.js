@@ -96,5 +96,4 @@ let cities = [
         userid: "admin4",
     }
 ]
-console.log(cities);
 export default cities

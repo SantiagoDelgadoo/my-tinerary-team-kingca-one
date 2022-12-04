@@ -109,5 +109,4 @@ let activities = [
 }
 
 ]
-console.log(activities);
 export default activities
