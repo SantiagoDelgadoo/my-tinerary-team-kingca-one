@@ -13,24 +13,29 @@ export default function EventCard(props) {
   const dispatch = useDispatch();
   let [comments1, setComments] = useState([]);
   const { getComments } = commentAction;
-  let comments = useSelector((store) => store.commentReducer.listComment);
+  let commentCheck = false;
   let update = useSelector((store) => store.commentReducer.update);
   let change = async () => {
     setSeeComment(!seeComment);
     const capurarComments = await dispatch(getComments(event._id));
-    setComments(capurarComments.payload.listComment.arrayComment)
+    setComments(capurarComments.payload.listComment.arrayComment);
   };
-  useEffect(()  => {
-    async function peticionComment () {
+  useEffect(() => {
+    async function peticionComment() {
       const capurarComments = await dispatch(getComments(event._id));
-    setComments(capurarComments.payload.listComment.arrayComment)
+      setComments(capurarComments.payload.listComment.arrayComment);
     }
-    peticionComment()
+    peticionComment();
   }, [update]);
   console.log(comments1);
   const filteredComments = comments1.filter(
     (comment) => comment.showId === event._id
   );
+  if (filteredComments.length !== 0) {
+    commentCheck = true;
+  } else {
+    commentCheck = false;
+  }
   console.log(filteredComments);
   return (
     <>
@@ -44,7 +49,7 @@ export default function EventCard(props) {
             <div>
               <p>
                 <span>Date: </span>
-                {event.date.slice(0,10)}
+                {event.date.slice(0, 10)}
               </p>
               <p>
                 <span>Capacity: </span>
@@ -59,8 +64,9 @@ export default function EventCard(props) {
         {seeComment ? (
           <div className="containerComment">
             <div className="containerCreateComment">
-            <NewComment event={event._id}></NewComment>
+              <NewComment event={event._id}></NewComment>
             </div>
+            {commentCheck ? (
             <div className="containerCommentaries">
               <div className="comment">
                 {filteredComments?.map((comment) => (
@@ -68,6 +74,7 @@ export default function EventCard(props) {
                 ))}
               </div>
             </div>
+          ) : null}
           </div>
         ) : null}
       </div>

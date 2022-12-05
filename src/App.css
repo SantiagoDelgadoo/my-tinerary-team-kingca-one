@@ -772,6 +772,7 @@ fieldset {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
   color: white;
   padding: 4px;
@@ -785,7 +786,10 @@ fieldset {
 .descriptionCities {
   font-size: 20px;
 }
-
+.desciptionIti{
+  width:100%;
+  height: 15rem;
+}
 .divDelForm {
   display: flex;
   flex-direction: column;
@@ -2031,4 +2035,11 @@ cursor: pointer;
   font-weight: 700;
   margin: 2rem;
   cursor: pointer;
+}
+
+.conteinarIti{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

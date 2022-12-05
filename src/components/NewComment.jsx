@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 
 export default function NewComment(props) {
   let { event } = props;
+  console.log(event);
   const dispatch = useDispatch();
   let { token } = useSelector((store) => store.userReducer);
   let date = Date.now();

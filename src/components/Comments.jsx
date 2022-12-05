@@ -9,7 +9,7 @@ export default function Comments(props) {
   let [update, setUpdate] = useState(false);
   let { event, comment} = props;
   const dispatch = useDispatch();
-  let { token } = useSelector((store) => store.userReducer);
+  let { token,id } = useSelector((store) => store.userReducer);
   const { deleteComment } = commentAction;
   let [checkEdit, setcheckEdit] = useState(false);
   let date = Date.now();
@@ -18,6 +18,16 @@ export default function Comments(props) {
   let editBotton = () =>{
     setcheckEdit(!checkEdit);
   }
+  let userCheck =false
+  console.log(id);
+  console.log(comment.userId._id);
+  if(id===comment.userId._id){
+    userCheck=true
+  }
+  else{
+    userCheck=false
+  }
+
   const Delete = () => {
     Swal.fire({
       title: "Are you sure to delete this Comment?",
@@ -74,7 +84,8 @@ export default function Comments(props) {
             {comment.comment}
           </p>
         </div>
-        <div className="botonesEditar">
+        {userCheck?(
+          <div className="botonesEditar">
             <img
               src="https://cdn-icons-png.flaticon.com/128/860/860814.png"
               onClick={editBotton}
@@ -88,6 +99,8 @@ export default function Comments(props) {
               className="imgeditar"
             />
         </div>
+        ) : null
+        }
       </div>
     </div>
     {checkEdit ? (

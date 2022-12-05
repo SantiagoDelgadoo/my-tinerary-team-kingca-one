@@ -12,9 +12,6 @@ export default function Like(props) {
   const { likeDislike } = reactionsActions;
 
   const dispatch = useDispatch();
-console.log(token);
-console.log(reaction.name);
-console.log(itineraryId);
 
   const like = async (e) => {
     const res = await dispatch(
@@ -24,10 +21,8 @@ console.log(itineraryId);
         name: reaction.name,
       })
     );
-      console.log(res);
     setReaction(res.payload.reaction);
   };
-console.log(reaction);
   return (
     <div id="containerReactions">
       <p>{reaction2.userId.length}</p>

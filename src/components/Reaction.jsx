@@ -12,10 +12,10 @@ export default function Reaction(props) {
   let { itinerary } = props; 
   let { likeDislike } = reactionsActions; 
   let [allReactions, setReactionss] = useState([]);
-  console.log(id);
+
 
   const { reactions } = reactionsActions; 
-  console.log(itinerary);
+ 
 
   async function reactionsfunction() {
     const res = await dispatch(reactions({ id: itinerary, token: token })); 
@@ -25,7 +25,7 @@ export default function Reaction(props) {
   useEffect(() => {
     reactionsfunction(); 
   }, []);
-console.log(itinerary);
+
   return (
     <div id="containerReactions">
       {allReactions.map(reaction => (
